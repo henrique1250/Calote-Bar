@@ -25,13 +25,13 @@ func _ready() -> void:
 		spawn_npc()
 		
 func _on_spawn_timer_timeout() -> void:
-	if spawned_count >= max_npc:
+	if spawned_count > max_npc:
 		timer.stop()
 		return
 	
 	spawn_npc()
-	spawned_count += 1
 	_check_meta()
+	spawned_count += 1
 
 func _check_meta() -> void:
 	if spawned_count >= meta_npcs:
