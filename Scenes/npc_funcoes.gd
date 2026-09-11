@@ -21,7 +21,7 @@ class_name NpcGeneric
 @export var anim_walk: StringName = "walk"
 @export var anim_sit: StringName = "sit"
 
-
+@export var copo: Area3D
 
 enum NPC_States {
 	Idle,
@@ -143,6 +143,8 @@ func _sentar_na_cadeira() -> void:
 		animation_player.play(anim_sit)
 		interaction_timer.start()
 	)
+	
+	copo.mostrar_objeto()
 		
 
 func _on_navigation_agent_3d_navigation_finished() -> void:

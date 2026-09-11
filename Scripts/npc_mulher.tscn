@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dqexq5pxbmyfv" path="res://art/Personagens/NpcMulherTpose.fbm/NpcMulherTpose.fbx" id="1_n26d1"]
 [ext_resource type="Script" uid="uid://r1brlu57j7hw" path="res://Scenes/npc_funcoes.gd" id="1_xa5cy"]
-[ext_resource type="Script" uid="uid://cd3mvguta5asf" path="res://Scripts/interacao_cachaca.gd" id="2_xa5cy"]
 [ext_resource type="Script" uid="uid://bw1507flepkgr" path="res://Scenes/copo_script.gd" id="3_hxvyk"]
 [ext_resource type="Animation" uid="uid://b1kgiqxvnss05" path="res://art/Personagens/NpcMulherTpose.fbm/andando.res" id="3_qa5s3"]
 [ext_resource type="Texture2D" uid="uid://jkjq3e2i6wns" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_npc_gordo/npc_gordo_calça.jpg" id="3_r0ftn"]
@@ -39,11 +38,12 @@ radius = 0.19189453
 
 [sub_resource type="LabelSettings" id="LabelSettings_e076k"]
 
-[node name="NpcMulher" type="CharacterBody3D" unique_id=661315049]
+[node name="NpcMulher" type="CharacterBody3D" unique_id=661315049 node_paths=PackedStringArray("copo")]
 script = ExtResource("1_xa5cy")
 anim_idle = &"mulher/parada"
 anim_walk = &"mulher/andando"
 anim_sit = &"mulher/pedindo"
+copo = NodePath("AreaCopo")
 
 [node name="NpcMulherTpose" parent="." unique_id=89665144 instance=ExtResource("1_n26d1")]
 
@@ -119,19 +119,18 @@ path_height_offset = 0.5
 [node name="InteractionTimer" type="Timer" parent="." unique_id=130614452]
 wait_time = 10.0
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1920600070 node_paths=PackedStringArray("objeto_para_mostrar")]
+[node name="Area3D" type="Area3D" parent="." unique_id=1920600070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9639602, 0)
-script = ExtResource("2_xa5cy")
-objeto_para_mostrar = NodePath("../AreaCopo/Copo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1159259655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.80581045, 0)
 shape = SubResource("BoxShape3D_r1us6")
 
-[node name="AreaCopo" type="Area3D" parent="." unique_id=101637166 node_paths=PackedStringArray("minigame_ui")]
+[node name="AreaCopo" type="Area3D" parent="." unique_id=101637166 node_paths=PackedStringArray("minigame_ui", "objeto_para_mostrar")]
 transform = Transform3D(1, 0, 0, 0, 0.63656497, 0, 0, 0, 1, 0.0049839914, 1.9978855, 0)
 script = ExtResource("3_hxvyk")
 minigame_ui = NodePath("CanvasLayer")
+objeto_para_mostrar = NodePath("Copo")
 
 [node name="Copo" type="MeshInstance3D" parent="AreaCopo" unique_id=1141354389]
 transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.3, -3.5762787e-07, -0.3734225, 0)

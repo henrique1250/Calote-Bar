@@ -6,7 +6,7 @@ var pode_interagir: bool = false
 var npc_dono: NpcGeneric = null
 
 func _ready() -> void:
-	input_event.connect(_on_input_event)
+	#input_event.connect(_on_input_event)
 	
 	if objeto_para_mostrar:
 		objeto_para_mostrar.visible = false
