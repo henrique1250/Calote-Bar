@@ -21,7 +21,7 @@ class_name NpcGeneric
 @export var anim_walk: StringName = "walk"
 @export var anim_sit: StringName = "sit"
 
-@export var copo: Area3D
+@onready var copo: Area3D = $AreaCopo
 
 enum NPC_States {
 	Idle,

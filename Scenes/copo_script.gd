@@ -1,7 +1,7 @@
 extends Area3D
 
 @export var minigame_ui: CanvasLayer
-@export var objeto_para_mostrar: MeshInstance3D
+@onready var objeto_para_mostrar: MeshInstance3D = $Copo
 
 var pode_interagir: bool = false
 var npc_dono: NpcGeneric = null
