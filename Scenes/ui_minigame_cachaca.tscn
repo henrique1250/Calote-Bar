@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ctvk5jn5wxbsi"]
+
+[ext_resource type="Script" uid="uid://dwaimgshk28xs" path="res://Scenes/minigame_cachaca.gd" id="1_c5sbi"]
+
+[node name="Ui_Minigame_Cachaca" type="CanvasLayer" unique_id=1300220536 node_paths=PackedStringArray("contador")]
+script = ExtResource("1_c5sbi")
+contador = NodePath("ResultadoLabel")
+
+[node name="Panel" type="Panel" parent="." unique_id=1331036404]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Alvo" type="ColorRect" parent="." unique_id=2134858254]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Medidor" type="ColorRect" parent="." unique_id=1010397752]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ResultadoLabel" type="Label" parent="." unique_id=684172840]
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true

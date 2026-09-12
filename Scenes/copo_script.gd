@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var minigame_ui: CanvasLayer
+@onready var minigame_ui: CanvasLayer = $Ui_Minigame_Cachaca
 @onready var objeto_para_mostrar: MeshInstance3D = $Copo
 
 var pode_interagir: bool = false

@@ -9,9 +9,9 @@
 [ext_resource type="Animation" uid="uid://cys20tewxnbax" path="res://art/Personagens/NpcMagroTpose.fbm/animacoes/pedindo.res" id="5_1ydeb"]
 [ext_resource type="Animation" uid="uid://bca1xp63y7lpr" path="res://art/Personagens/NpcMagroTpose.fbm/sentado.res" id="6_yacm3"]
 [ext_resource type="Animation" uid="uid://byej7vvmv37ah" path="res://art/Personagens/NpcMagroTpose.fbm/animacoes/sentando_cadeira.res" id="7_mgwu6"]
+[ext_resource type="PackedScene" uid="uid://ctvk5jn5wxbsi" path="res://Scenes/ui_minigame_cachaca.tscn" id="12_1ydeb"]
 [ext_resource type="PackedScene" uid="uid://0v37sbgbd5au" path="res://Assets/PROP_copo_americano.glb" id="12_yacm3"]
 [ext_resource type="Script" uid="uid://bw1507flepkgr" path="res://Scenes/copo_script.gd" id="14_5r46w"]
-[ext_resource type="Script" uid="uid://dwaimgshk28xs" path="res://Scenes/minigame_cachaca.gd" id="15_m0hu1"]
 [ext_resource type="Script" uid="uid://brkienvq8h2uo" path="res://Scenes/meta_counter_script.gd" id="16_upmjd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yacm3"]
@@ -113,10 +113,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9639602, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.80581045, 0)
 shape = SubResource("BoxShape3D_sw5lj")
 
-[node name="AreaCopo" type="Area3D" parent="." unique_id=94147646 node_paths=PackedStringArray("minigame_ui")]
+[node name="AreaCopo" type="Area3D" parent="." unique_id=94147646]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10352245, 2.2283201, 0)
 script = ExtResource("14_5r46w")
-minigame_ui = NodePath("CanvasLayer")
 
 [node name="Copo" type="MeshInstance3D" parent="AreaCopo" unique_id=83593947]
 transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.3, -3.5762787e-07, -0.3734225, 0)
@@ -128,30 +127,7 @@ transform = Transform3D(10, 0, 0, 0, 15, 0, 0, 0, 10, 1.1920929e-06, -0.7417488,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37342834, 0)
 shape = SubResource("CylinderShape3D_qsw3x")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="AreaCopo" unique_id=1613683297 node_paths=PackedStringArray("contador")]
-script = ExtResource("15_m0hu1")
-contador = NodePath("../../Meta_UI/Control/Label")
-
-[node name="Panel" type="Panel" parent="AreaCopo/CanvasLayer" unique_id=1380932928]
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Alvo" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=1028416877]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 1, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Medidor" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=1269715487]
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="ResultadoLabel" type="Label" parent="AreaCopo/CanvasLayer" unique_id=1403814119]
-offset_right = 40.0
-offset_bottom = 23.0
-metadata/_edit_use_anchors_ = true
+[node name="Ui_Minigame_Cachaca" parent="AreaCopo" unique_id=1300220536 instance=ExtResource("12_1ydeb")]
 
 [node name="Meta_UI" type="CanvasLayer" parent="." unique_id=844116763]
 visible = false

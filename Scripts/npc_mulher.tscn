@@ -6,11 +6,12 @@
 [ext_resource type="Animation" uid="uid://b1kgiqxvnss05" path="res://art/Personagens/NpcMulherTpose.fbm/andando.res" id="3_qa5s3"]
 [ext_resource type="Texture2D" uid="uid://jkjq3e2i6wns" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_npc_gordo/npc_gordo_calça.jpg" id="3_r0ftn"]
 [ext_resource type="Animation" uid="uid://bkwws0gqecund" path="res://art/Personagens/NpcMulherTpose.fbm/parada.res" id="4_r1us6"]
-[ext_resource type="Script" uid="uid://dwaimgshk28xs" path="res://Scenes/minigame_cachaca.gd" id="4_tobpy"]
 [ext_resource type="Texture2D" uid="uid://dcdeicr6y8ihl" path="res://art/Personagens/NpcMulherTpose.fbm/npc_mulher_camisa.jpg" id="4_wdyrt"]
 [ext_resource type="Script" uid="uid://brkienvq8h2uo" path="res://Scenes/meta_counter_script.gd" id="5_f545w"]
 [ext_resource type="Animation" uid="uid://dm4gepvqkrpyv" path="res://art/Personagens/NpcMulherTpose.fbm/pedindo.res" id="5_r0ftn"]
 [ext_resource type="Animation" uid="uid://d07xn1umyrhcs" path="res://art/Personagens/NpcMulherTpose.fbm/sentada.res" id="6_wdyrt"]
+[ext_resource type="PackedScene" uid="uid://0v37sbgbd5au" path="res://Assets/PROP_copo_americano.glb" id="10_r0ftn"]
+[ext_resource type="PackedScene" uid="uid://ctvk5jn5wxbsi" path="res://Scenes/ui_minigame_cachaca.tscn" id="10_r1us6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e076k"]
 albedo_texture = ExtResource("3_r0ftn")
@@ -38,12 +39,11 @@ radius = 0.19189453
 
 [sub_resource type="LabelSettings" id="LabelSettings_e076k"]
 
-[node name="NpcMulher" type="CharacterBody3D" unique_id=661315049 node_paths=PackedStringArray("copo")]
+[node name="NpcMulher" type="CharacterBody3D" unique_id=661315049]
 script = ExtResource("1_xa5cy")
 anim_idle = &"mulher/parada"
 anim_walk = &"mulher/andando"
 anim_sit = &"mulher/pedindo"
-copo = NodePath("AreaCopo")
 
 [node name="NpcMulherTpose" parent="." unique_id=89665144 instance=ExtResource("1_n26d1")]
 
@@ -126,43 +126,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9639602, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.80581045, 0)
 shape = SubResource("BoxShape3D_r1us6")
 
-[node name="AreaCopo" type="Area3D" parent="." unique_id=101637166 node_paths=PackedStringArray("minigame_ui", "objeto_para_mostrar")]
+[node name="AreaCopo" type="Area3D" parent="." unique_id=101637166]
 transform = Transform3D(1, 0, 0, 0, 0.63656497, 0, 0, 0, 1, 0.0049839914, 1.9978855, 0)
 script = ExtResource("3_hxvyk")
-minigame_ui = NodePath("CanvasLayer")
-objeto_para_mostrar = NodePath("Copo")
 
 [node name="Copo" type="MeshInstance3D" parent="AreaCopo" unique_id=1141354389]
 transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.3, -3.5762787e-07, -0.3734225, 0)
 mesh = SubResource("CylinderMesh_r0ftn")
 
+[node name="PROP_copo_americano" parent="AreaCopo/Copo" unique_id=1248823132 instance=ExtResource("10_r0ftn")]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCopo" unique_id=1251994342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37342834, 0)
 shape = SubResource("CylinderShape3D_wdyrt")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="AreaCopo" unique_id=319693553]
-script = ExtResource("4_tobpy")
-
-[node name="Panel" type="Panel" parent="AreaCopo/CanvasLayer" unique_id=1505420646]
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Alvo" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=686752747]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 1, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Medidor" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=1940146158]
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="ResultadoLabel" type="Label" parent="AreaCopo/CanvasLayer" unique_id=700495778]
-offset_right = 40.0
-offset_bottom = 23.0
-metadata/_edit_use_anchors_ = true
+[node name="Ui_Minigame_Cachaca" parent="AreaCopo" unique_id=1300220536 instance=ExtResource("10_r1us6")]
 
 [node name="Meta_UI" type="CanvasLayer" parent="." unique_id=580071074]
 visible = false
