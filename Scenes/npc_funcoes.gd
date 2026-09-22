@@ -11,17 +11,16 @@ class_name NpcGeneric
 @onready var idle_timer: Timer = find_child("Timer", true, false)
 @onready var interaction_timer: Timer = find_child("InteractionTimer", true, false)
 
-
 @export var marker_saida: Array = []      
 @export var tempo_sentado: float = 10.0  
 @export var offset_sentar: Vector3 = Vector3(0, -0.078, 0)
-
 
 @export var anim_idle: StringName = "idle"
 @export var anim_walk: StringName = "walk"
 @export var anim_sit: StringName = "sit"
 
 @onready var copo: Area3D = $AreaCopo
+@onready var cachaca: CanvasLayer = $AreaCopo/Ui_Minigame_Cachaca
 
 enum NPC_States {
 	Idle,
@@ -34,7 +33,6 @@ var heading_to_exit: bool = false
 var SPEED: float = 2.0
 var current_state: NPC_States
 var current_destinition: Marker3D
-
 var walk_count: int = 0
 const WALKS_BEFORE_INTERACTION := 3
 
@@ -75,16 +73,13 @@ func _physics_process(_float) -> void:
 
 	move_and_slide()
 
-
 func _on_timer_timeout() -> void:
 	decide_next_stage()
-
 
 func decide_next_stage() -> void:
 	if current_state == NPC_States.Idle:
 		move_to_marker()
 		_set_state(NPC_States.Walking)
-
 
 func move_to_marker() -> void:
 	if destination_npc.is_empty():
@@ -92,7 +87,6 @@ func move_to_marker() -> void:
 		return
 	current_destinition = destination_npc.pick_random()
 	navigation_agent.target_position = current_destinition.global_position
-
 
 func _on_destination_reached() -> void:
 	velocity = Vector3.ZERO
@@ -102,12 +96,11 @@ func _on_destination_reached() -> void:
 		queue_free()
 		return
 
-
 	if heading_to_interaction:
 		heading_to_interaction = false
 		_set_state(NPC_States.Interact)
 		return
-
+		
 	walk_count += 1
 
 	if walk_count >= WALKS_BEFORE_INTERACTION and pontos_interacao.size() > 0:
@@ -122,8 +115,6 @@ func _on_destination_reached() -> void:
 		current_destinition = marker
 		navigation_agent.target_position = marker.global_position
 		current_state = NPC_States.Walking
-
-
 
 func _sentar_na_cadeira() -> void:
 	if current_destinition == null:
@@ -160,6 +151,10 @@ func _on_interaction_timer_timeout() -> void:
 		return
 	
 	EventBus.npc_finalizou_interacao.emit(self)
+	
+	cachaca.falha()
+	
+	await get_tree().create_timer(2.0).timeout
 
 	var saida: Marker3D = marker_saida.pick_random()
 	current_destinition = saida

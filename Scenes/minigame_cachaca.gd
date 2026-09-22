@@ -161,6 +161,9 @@ func sucesso():
 	
 func falha():
 	minigame_ativado = false
+	painel.visible = true
+	visible = true
+	
 	resultado_label.text = "FIADO!"
 	resultado_label.modulate = Color.RED
 	resultado_label.visible = true
