@@ -134,7 +134,7 @@ func _sentar_na_cadeira() -> void:
 		animation_player.play(anim_sit)
 		interaction_timer.start()
 	)
-	
+
 	copo.mostrar_objeto()
 		
 
@@ -151,8 +151,9 @@ func _on_interaction_timer_timeout() -> void:
 		return
 	
 	EventBus.npc_finalizou_interacao.emit(self)
-	
-	cachaca.falha()
+
+	if(!cachaca.game_win):
+		cachaca.falha()
 	
 	await get_tree().create_timer(2.0).timeout
 

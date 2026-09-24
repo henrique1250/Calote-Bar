@@ -27,6 +27,8 @@ var alvo_direcao := 0.0
 
 var tempo_acumulado_no_alvo := 0.0
 
+@export var game_win := false
+
 @onready var alvo = $Alvo
 @onready var medidor = $Medidor_Externo
 @onready var barra_movel = $Medidor_Externo/Medidor_Interno
@@ -40,6 +42,8 @@ func _ready() -> void:
 	alvo.visible = false
 	medidor.visible = false
 	barra_movel.visible = false
+	
+	game_win = false
 	
 	var tela = get_viewport().size
 	
@@ -155,6 +159,8 @@ func sucesso():
 		ContadorGlobal.incrementar(5)
 	print("Acertou")
 	
+	game_win = true
+	
 	await get_tree().create_timer(1.0).timeout
 	
 	fechar_minigame()
@@ -170,7 +176,9 @@ func falha():
 	print("ERROU!")
 	
 	if Engine.has_singleton("ContadorGlobal") or get_node_or_null("/root/ContadorGlobal"):
-		ContadorGlobal.incrementar(0)  
+		ContadorGlobal.incrementar(0)
+		
+	game_win = false  
 	
 	await get_tree().create_timer(1.0).timeout
 	

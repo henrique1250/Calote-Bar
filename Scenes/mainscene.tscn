@@ -632,7 +632,7 @@ offset_bottom = 202.0
 text = "ESCOLHER"
 
 [node name="Panel2" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1689214509]
-modulate = Color(1, 1, 1, 0.97065973)
+modulate = Color(1, 1, 1, 0.9241374)
 z_index = -1
 layout_mode = 0
 offset_left = 169.08728
@@ -660,7 +660,7 @@ scale = Vector2(0.2, 0.19947544)
 texture = ExtResource("25_vamgo")
 
 [node name="Panel3" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=884635700]
-modulate = Color(1, 1, 1, 0.94131947)
+modulate = Color(1, 1, 1, 0.8482748)
 z_index = -2
 layout_mode = 0
 offset_left = 369.08728
@@ -688,7 +688,7 @@ offset_bottom = 202.5
 text = "ESCOLHER"
 
 [node name="Panel4" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1704902061]
-modulate = Color(1, 1, 1, 0.91197914)
+modulate = Color(1, 1, 1, 0.77241224)
 z_index = -3
 layout_mode = 0
 offset_left = 569.0873
