@@ -4,11 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://2bbcf6kk7j3n" path="res://art/Personagens/NpcGordoTpose.fbm/NpcGordoTpose.fbx" id="2_nwtcb"]
 [ext_resource type="Texture2D" uid="uid://dy8w4kvp8pnts" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_npc_gordo/PeleNpcGordoColor.png" id="3_qsw3x"]
 [ext_resource type="Texture2D" uid="uid://c13q7sfrpnb8c" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_garçom/OlhoGarcomColor.png" id="4_6nps6"]
-[ext_resource type="Script" uid="uid://cd3mvguta5asf" path="res://Scripts/interacao_cachaca.gd" id="4_af6yk"]
 [ext_resource type="Texture2D" uid="uid://dewfp6m0r8qht" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_npc_gordo/CabeloNpcGordoColor.png" id="5_lchqh"]
 [ext_resource type="Script" uid="uid://bw1507flepkgr" path="res://Scenes/copo_script.gd" id="5_odf6x"]
 [ext_resource type="Texture2D" uid="uid://crjr2p8vsroi2" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_npc_gordo/BigodeNpcGordoColor.png" id="5_piud4"]
-[ext_resource type="Script" uid="uid://dwaimgshk28xs" path="res://Scenes/minigame_cachaca.gd" id="6_2eopg"]
 [ext_resource type="Texture2D" uid="uid://dcdagqwbo2e5v" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_npc_gordo/SobrancelhaNpcGordoColor.png" id="6_vdk52"]
 [ext_resource type="Script" uid="uid://brkienvq8h2uo" path="res://Scenes/meta_counter_script.gd" id="7_2eopg"]
 [ext_resource type="Animation" uid="uid://ue12j2jue7ab" path="res://art/Personagens/NpcGordoTpose.fbm/Animações/gorda_esperando.res" id="7_2xb00"]
@@ -19,6 +17,7 @@
 [ext_resource type="Animation" uid="uid://dr28a6j07gypd" path="res://art/Personagens/NpcGordoTpose.fbm/Animações/idle1.res" id="10_j4jg1"]
 [ext_resource type="Animation" uid="uid://bpe88eb3bds3w" path="res://art/Personagens/NpcGordoTpose.fbm/Animações/sentado.res" id="10_piud4"]
 [ext_resource type="Animation" uid="uid://d3qxtw2dbow1i" path="res://art/Personagens/NpcGordoTpose.fbm/Animações/idle2.res" id="11_piud4"]
+[ext_resource type="PackedScene" uid="uid://ctvk5jn5wxbsi" path="res://Scenes/ui_minigame_cachaca.tscn" id="18_piud4"]
 [ext_resource type="PackedScene" uid="uid://boxm61mxoxtfs" path="res://Assets/PROP_copo.glb" id="18_wd7ag"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fac00"]
@@ -70,7 +69,7 @@ anim_sit = &"gorda_animations/gorda_pedindo"
 
 [node name="NpcGordoTpose" parent="." unique_id=1579526015 instance=ExtResource("2_nwtcb")]
 
-[node name="Skeleton3D" parent="NpcGordoTpose/OssoRef" parent_id_path=PackedInt32Array(1579526015, 1618032102) index="0" unique_id=1361934879]
+[node name="Skeleton3D" parent="NpcGordoTpose/OssoRef" parent_id_path=PackedInt32Array(1579526015, 108203584) index="0" unique_id=1437852531]
 bones/0/position = Vector3(-9.564639e-07, -0.0027964183, 0.006144375)
 bones/1/rotation = Quaternion(-0.079785064, 0.035024624, 0.00072803505, 0.9961963)
 bones/2/rotation = Quaternion(-0.10017256, 0.03733266, 0.004361881, 0.9942599)
@@ -145,7 +144,7 @@ bones/69/rotation = Quaternion(-0.6187198, -0.009854189, -0.028125413, 0.7850464
 bones/70/rotation = Quaternion(0.1752581, 0.006784712, 0.032829277, 0.9839517)
 bones/71/rotation = Quaternion(0.46003452, -0.001694897, -0.00015634827, 0.88789946)
 
-[node name="NpcGordo" parent="NpcGordoTpose/OssoRef/Skeleton3D" index="0" unique_id=851441552]
+[node name="NpcGordo" parent="NpcGordoTpose/OssoRef/Skeleton3D" index="0" unique_id=92726483]
 surface_material_override/0 = SubResource("StandardMaterial3D_fac00")
 surface_material_override/1 = SubResource("StandardMaterial3D_ca3jf")
 surface_material_override/2 = SubResource("StandardMaterial3D_283lc")
@@ -173,19 +172,16 @@ path_height_offset = 0.4
 [node name="InteractionTimer" type="Timer" parent="." unique_id=738062159]
 wait_time = 10.0
 
-[node name="Area3D" type="Area3D" parent="." unique_id=500277582 node_paths=PackedStringArray("objeto_para_mostrar")]
+[node name="Area3D" type="Area3D" parent="." unique_id=500277582]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9639602, 0)
-script = ExtResource("4_af6yk")
-objeto_para_mostrar = NodePath("../AreaCopo/Copo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1836706399]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.80581045, 0)
 shape = SubResource("BoxShape3D_sw5lj")
 
-[node name="AreaCopo" type="Area3D" parent="." unique_id=94147646 node_paths=PackedStringArray("minigame_ui")]
+[node name="AreaCopo" type="Area3D" parent="." unique_id=94147646]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017830133, 2.2324536, 0)
 script = ExtResource("5_odf6x")
-minigame_ui = NodePath("CanvasLayer")
 
 [node name="Copo" type="MeshInstance3D" parent="AreaCopo" unique_id=83593947]
 transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.3, -3.5762787e-07, -0.3734225, 0)
@@ -197,26 +193,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.84096336, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37342834, 0)
 shape = SubResource("CylinderShape3D_qsw3x")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="AreaCopo" unique_id=1613683297 node_paths=PackedStringArray("contador")]
-script = ExtResource("6_2eopg")
-contador = NodePath("../../Meta_UI/Control/Label")
-
-[node name="Panel" type="Panel" parent="AreaCopo/CanvasLayer" unique_id=1380932928]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Alvo" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=1028416877]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 1, 0, 1)
-
-[node name="Medidor" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=1269715487]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ResultadoLabel" type="Label" parent="AreaCopo/CanvasLayer" unique_id=1403814119]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Ui_Minigame_Cachaca" parent="AreaCopo" unique_id=1300220536 instance=ExtResource("18_piud4")]
 
 [node name="Meta_UI" type="CanvasLayer" parent="." unique_id=844116763]
 visible = false

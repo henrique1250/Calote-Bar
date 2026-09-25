@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://dqexq5pxbmyfv" path="res://art/Personagens/NpcMulherTpose.fbm/NpcMulherTpose.fbx" id="1_n26d1"]
 [ext_resource type="Script" uid="uid://r1brlu57j7hw" path="res://Scenes/npc_funcoes.gd" id="1_xa5cy"]
-[ext_resource type="Script" uid="uid://cd3mvguta5asf" path="res://Scripts/interacao_cachaca.gd" id="2_xa5cy"]
-[ext_resource type="Script" path="res://Scenes/copo_script.gd" id="3_hxvyk"]
-[ext_resource type="Animation" uid="uid://b3bx4q4cskrc5" path="res://art/Personagens/NpcMulherTpose.fbm/andando.res" id="3_qa5s3"]
+[ext_resource type="Script" uid="uid://bw1507flepkgr" path="res://Scenes/copo_script.gd" id="3_hxvyk"]
+[ext_resource type="Animation" uid="uid://b1kgiqxvnss05" path="res://art/Personagens/NpcMulherTpose.fbm/andando.res" id="3_qa5s3"]
 [ext_resource type="Texture2D" uid="uid://jkjq3e2i6wns" path="res://art/Personagens/NpcGordoTpose.fbm/Texturas/textura_npc_gordo/npc_gordo_calça.jpg" id="3_r0ftn"]
 [ext_resource type="Animation" uid="uid://bkwws0gqecund" path="res://art/Personagens/NpcMulherTpose.fbm/parada.res" id="4_r1us6"]
-[ext_resource type="Script" path="res://Scenes/minigame_cachaca.gd" id="4_tobpy"]
 [ext_resource type="Texture2D" uid="uid://dcdeicr6y8ihl" path="res://art/Personagens/NpcMulherTpose.fbm/npc_mulher_camisa.jpg" id="4_wdyrt"]
-[ext_resource type="Script" path="res://Scenes/meta_counter_script.gd" id="5_f545w"]
+[ext_resource type="Script" uid="uid://brkienvq8h2uo" path="res://Scenes/meta_counter_script.gd" id="5_f545w"]
 [ext_resource type="Animation" uid="uid://dm4gepvqkrpyv" path="res://art/Personagens/NpcMulherTpose.fbm/pedindo.res" id="5_r0ftn"]
 [ext_resource type="Animation" uid="uid://d07xn1umyrhcs" path="res://art/Personagens/NpcMulherTpose.fbm/sentada.res" id="6_wdyrt"]
+[ext_resource type="PackedScene" uid="uid://0v37sbgbd5au" path="res://Assets/PROP_copo_americano.glb" id="10_r0ftn"]
+[ext_resource type="PackedScene" uid="uid://ctvk5jn5wxbsi" path="res://Scenes/ui_minigame_cachaca.tscn" id="10_r1us6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e076k"]
 albedo_texture = ExtResource("3_r0ftn")
@@ -47,7 +47,7 @@ anim_sit = &"mulher/pedindo"
 
 [node name="NpcMulherTpose" parent="." unique_id=89665144 instance=ExtResource("1_n26d1")]
 
-[node name="Skeleton3D" parent="NpcMulherTpose/OssoRef" parent_id_path=PackedInt32Array(89665144, 549721252) index="0" unique_id=851566909]
+[node name="Skeleton3D" parent="NpcMulherTpose/OssoRef" parent_id_path=PackedInt32Array(89665144, 1302972541) index="0" unique_id=1404565673]
 bones/0/position = Vector3(4.526589e-08, -3.6807072e-05, 0.008877735)
 bones/3/rotation = Quaternion(0.03342534, -0.040031306, -0.819571, 0.57059944)
 bones/4/rotation = Quaternion(0.14259355, -0.15141591, -0.41308635, 0.8866229)
@@ -96,12 +96,13 @@ bones/66/rotation = Quaternion(-0.07206288, 0.0012413911, 0.0076406617, 0.997370
 bones/67/rotation = Quaternion(-0.07245926, 0.00018460945, -0.007762418, 0.99734116)
 bones/68/rotation = Quaternion(0.30760828, -3.080086e-07, 0.00019206046, 0.9515132)
 
-[node name="NpcGordo_001" parent="NpcMulherTpose/OssoRef/Skeleton3D" index="0" unique_id=647221650]
+[node name="NpcGordo_001" parent="NpcMulherTpose/OssoRef/Skeleton3D" index="0" unique_id=162261949]
 surface_material_override/1 = SubResource("StandardMaterial3D_e076k")
 surface_material_override/2 = SubResource("StandardMaterial3D_g6irk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NpcMulherTpose" unique_id=398972146]
 libraries/mulher = SubResource("AnimationLibrary_e076k")
+autoplay = &"mulher/andando"
 speed_scale = 2.3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=861453958]
@@ -118,51 +119,28 @@ path_height_offset = 0.5
 [node name="InteractionTimer" type="Timer" parent="." unique_id=130614452]
 wait_time = 10.0
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1920600070 node_paths=PackedStringArray("objeto_para_mostrar")]
+[node name="Area3D" type="Area3D" parent="." unique_id=1920600070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9639602, 0)
-script = ExtResource("2_xa5cy")
-objeto_para_mostrar = NodePath("../AreaCopo/Copo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1159259655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.80581045, 0)
 shape = SubResource("BoxShape3D_r1us6")
 
-[node name="AreaCopo" type="Area3D" parent="." unique_id=101637166 node_paths=PackedStringArray("minigame_ui")]
+[node name="AreaCopo" type="Area3D" parent="." unique_id=101637166]
 transform = Transform3D(1, 0, 0, 0, 0.63656497, 0, 0, 0, 1, 0.0049839914, 1.9978855, 0)
 script = ExtResource("3_hxvyk")
-minigame_ui = NodePath("CanvasLayer")
 
 [node name="Copo" type="MeshInstance3D" parent="AreaCopo" unique_id=1141354389]
 transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.3, -3.5762787e-07, -0.3734225, 0)
 mesh = SubResource("CylinderMesh_r0ftn")
 
+[node name="PROP_copo_americano" parent="AreaCopo/Copo" unique_id=1248823132 instance=ExtResource("10_r0ftn")]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCopo" unique_id=1251994342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37342834, 0)
 shape = SubResource("CylinderShape3D_wdyrt")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="AreaCopo" unique_id=319693553]
-script = ExtResource("4_tobpy")
-
-[node name="Panel" type="Panel" parent="AreaCopo/CanvasLayer" unique_id=1505420646]
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Alvo" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=686752747]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 1, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Medidor" type="ColorRect" parent="AreaCopo/CanvasLayer" unique_id=1940146158]
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="ResultadoLabel" type="Label" parent="AreaCopo/CanvasLayer" unique_id=700495778]
-offset_right = 40.0
-offset_bottom = 23.0
-metadata/_edit_use_anchors_ = true
+[node name="Ui_Minigame_Cachaca" parent="AreaCopo" unique_id=1300220536 instance=ExtResource("10_r1us6")]
 
 [node name="Meta_UI" type="CanvasLayer" parent="." unique_id=580071074]
 visible = false
