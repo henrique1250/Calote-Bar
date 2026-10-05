@@ -343,19 +343,19 @@ stream = ExtResource("4_jijtd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6567183, 0.5104849, 4.1378345)
 
 [node name="PROP_cerveja_heineken" parent="NavigationRegion3D/Sinuquinha" unique_id=1700984921 instance=ExtResource("5_j1a25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7077209, 1.1283692, -1.2362056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7077209, 1.0966244, -1.2362056)
 
 [node name="PROP_cerveja_heineken5" parent="NavigationRegion3D/Sinuquinha" unique_id=1277205449 instance=ExtResource("5_j1a25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50881, 0.7896751, 6.1129646)
 
 [node name="PROP_cerveja_heineken2" parent="NavigationRegion3D/Sinuquinha" unique_id=639597341 instance=ExtResource("5_j1a25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8900803, 1.1283692, -1.200124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8900803, 1.0966244, -1.200124)
 
 [node name="PROP_cerveja_heineken4" parent="NavigationRegion3D/Sinuquinha" unique_id=2100413446 instance=ExtResource("5_j1a25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3443396, 1.1283692, -1.3707631)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3443396, 1.0966244, -1.3707631)
 
 [node name="PROP_cerveja_heineken3" parent="NavigationRegion3D/Sinuquinha" unique_id=1287347406 instance=ExtResource("5_j1a25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.012249, 1.1283692, -1.1049526)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.012249, 1.0966244, -1.1049526)
 
 [node name="PROP_copo_americano" parent="NavigationRegion3D/Sinuquinha" unique_id=775406866 instance=ExtResource("6_xodc5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0770906, 0.59803313, 2.466937)
@@ -364,12 +364,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0770906, 0.59803313, 2.4669
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81487215, 0.5761946, 2.4947126)
 
 [node name="PROP_copo_americano3" parent="NavigationRegion3D/Sinuquinha" unique_id=860739016 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7252326, 0.80858886, 1.4661313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7252326, 0.7778485, 1.4661313)
 
 [node name="PROP_cadeira" parent="NavigationRegion3D" unique_id=1872401475 instance=ExtResource("13_hkskg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7692857, 0, 2.2483315)
 
-[node name="Cube_002" parent="NavigationRegion3D/PROP_cadeira" index="0" unique_id=206294539]
+[node name="Cube_002" parent="NavigationRegion3D/PROP_cadeira" index="0" unique_id=1728101013]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7410476, 0.44730288, -0.46348524)
 layers = 2
 mesh = null
@@ -473,19 +473,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007080078, -0.39557555, 0.
 [node name="PROP_balcao-modular" parent="NavigationRegion3D" unique_id=509138039 instance=ExtResource("9_tf7l5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002100706, 0, -1.4112058)
 
-[node name="canto-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="0" unique_id=1781524937]
+[node name="canto-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="0" unique_id=583987978]
 transform = Transform3D(1.1116476, 0, 0, 0, 1.1116476, 0, 0, 0, 1.1116476, 3.33, 0.539, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
-[node name="ponta-esquerda-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="1" unique_id=2035521804]
+[node name="ponta-esquerda-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="1" unique_id=2086773072]
 transform = Transform3D(-4.859166e-08, 0, -1.1116476, 0, 1.1116476, 0, 1.1116476, 0, -4.859166e-08, -3.44, 0.539, -1.995)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
-[node name="ponta-direita-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="2" unique_id=1575321334]
+[node name="ponta-direita-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="2" unique_id=282421442]
 transform = Transform3D(1.1116476, 0, 0, 0, 1.1116476, 0, 0, 0, 1.1116476, 0, 0.539, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
-[node name="meio-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="3" unique_id=1300512590]
+[node name="meio-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="3" unique_id=1539447607]
 transform = Transform3D(-4.859166e-08, 0, -1.1116476, 0, 1.1116476, 0, 1.1116476, 0, -4.859166e-08, -3.44, 0.539, -0.885)
 rotation_order = 0
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
@@ -632,7 +632,7 @@ offset_bottom = 202.0
 text = "ESCOLHER"
 
 [node name="Panel2" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1689214509]
-modulate = Color(1, 1, 1, 0.9241374)
+modulate = Color(1, 1, 1, 0.9887153)
 z_index = -1
 layout_mode = 0
 offset_left = 169.08728
@@ -660,7 +660,7 @@ scale = Vector2(0.2, 0.19947544)
 texture = ExtResource("25_vamgo")
 
 [node name="Panel3" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=884635700]
-modulate = Color(1, 1, 1, 0.8482748)
+modulate = Color(1, 1, 1, 0.9774306)
 z_index = -2
 layout_mode = 0
 offset_left = 369.08728
@@ -688,7 +688,7 @@ offset_bottom = 202.5
 text = "ESCOLHER"
 
 [node name="Panel4" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1704902061]
-modulate = Color(1, 1, 1, 0.77241224)
+modulate = Color(1, 1, 1, 0.9661458)
 z_index = -3
 layout_mode = 0
 offset_left = 569.0873
@@ -923,7 +923,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
 [node name="PROP_balcao_quina" parent="." unique_id=2111459800 instance=ExtResource("15_xdmf7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4124731)
 
-[node name="canto-balcao-esquerdo" parent="PROP_balcao_quina" index="0" unique_id=1371456543]
+[node name="canto-balcao-esquerdo" parent="PROP_balcao_quina" index="0" unique_id=1401271767]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
@@ -997,22 +997,22 @@ transform = Transform3D(-0.8886413, 0, 0.45860296, 0, 1, 0, -0.45860296, 0, -0.8
 transform = Transform3D(-0.8886413, 0, 0.45860296, 0, 1, 0, -0.45860296, 0, -0.8886413, -2.7774892, 0.7671292, 1.8050137)
 
 [node name="PROP_cerveja" parent="Cervejas avulsas" unique_id=581328387 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1591885, 0.015713573, 7.6222367)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1591885, -0.022084653, 7.6222367)
 
 [node name="PROP_cerveja2" parent="Cervejas avulsas" unique_id=686647740 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.081025, 0.006183803, 7.5102773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.081025, -0.020132601, 7.5102773)
 
 [node name="PROP_cerveja3" parent="Cervejas avulsas" unique_id=954066066 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.977526, 0.0076402426, 7.5741763)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.977526, -0.018676162, 7.5741763)
 
 [node name="PROP_cerveja4" parent="Cervejas avulsas" unique_id=1429110891 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04636, 0.0061373115, 6.2504835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04636, -0.027121127, 6.2504835)
 
 [node name="PROP_cerveja6" parent="Cervejas avulsas" unique_id=1345754391 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8222551, 0.0061373115, 5.9345036)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8222551, -0.031703115, 5.9345036)
 
 [node name="PROP_cerveja7" parent="Cervejas avulsas" unique_id=802321402 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8222551, 0.0030536056, 1.6145043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8221908, -0.03553313, 1.6143787)
 
 [node name="PROP_rua_tamanho" parent="Cervejas avulsas" unique_id=1253847839 instance=ExtResource("32_xbg07")]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 0.6171551, 0, -53.571228)
@@ -1030,7 +1030,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.720983, 0.78697395, 6.2686
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.629536, 0.78697395, 6.3207636)
 
 [node name="PROP_cerveja_skol" parent="Cervejas avulsas" unique_id=79027710 instance=ExtResource("33_okbyl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7806973, 0.8800359, 3.7962554)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7806973, 0.87143326, 3.7962554)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1039267228]
 stream = ExtResource("38_m7b6h")
