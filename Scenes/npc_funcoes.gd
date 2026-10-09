@@ -81,11 +81,35 @@ func decide_next_stage() -> void:
 		move_to_marker()
 		_set_state(NPC_States.Walking)
 
+#Verifica se algum NPC esta próximo do marker
+func _is_marker_occupied(marker: Marker3D, raio: float = 1.5) -> bool:
+	for npc in get_tree().get_nodes_in_group("npc"):
+		if npc == self:
+			continue
+		if npc.global_position.distance_to(marker.global_position) < raio:
+			return true
+	return false
+
 func move_to_marker() -> void:
 	if destination_npc.is_empty():
 		push_warning("destination_npc está vazio em %s" % name)
 		return
-	current_destinition = destination_npc.pick_random()
+	
+	var tentativas = 0
+	var marker_escolhido = null
+	
+	while tentativas < 10:
+		var marker = destination_npc.pick_random()
+		
+		if not _is_marker_occupied(marker):
+			marker_escolhido = marker
+			break
+		tentativas += 1
+	
+	if marker_escolhido == null:
+		marker_escolhido = destination_npc.pick_random()
+	
+	current_destinition = marker_escolhido
 	navigation_agent.target_position = current_destinition.global_position
 
 func _on_destination_reached() -> void:

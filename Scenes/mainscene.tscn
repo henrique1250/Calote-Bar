@@ -369,7 +369,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7252326, 0.7778485, 1.4661
 [node name="PROP_cadeira" parent="NavigationRegion3D" unique_id=1872401475 instance=ExtResource("13_hkskg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7692857, 0, 2.2483315)
 
-[node name="Cube_002" parent="NavigationRegion3D/PROP_cadeira" index="0" unique_id=1728101013]
+[node name="Cube_002" parent="NavigationRegion3D/PROP_cadeira" index="0" unique_id=206294539]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7410476, 0.44730288, -0.46348524)
 layers = 2
 mesh = null
@@ -473,19 +473,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007080078, -0.39557555, 0.
 [node name="PROP_balcao-modular" parent="NavigationRegion3D" unique_id=509138039 instance=ExtResource("9_tf7l5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002100706, 0, -1.4112058)
 
-[node name="canto-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="0" unique_id=583987978]
+[node name="canto-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="0" unique_id=1781524937]
 transform = Transform3D(1.1116476, 0, 0, 0, 1.1116476, 0, 0, 0, 1.1116476, 3.33, 0.539, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
-[node name="ponta-esquerda-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="1" unique_id=2086773072]
+[node name="ponta-esquerda-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="1" unique_id=2035521804]
 transform = Transform3D(-4.859166e-08, 0, -1.1116476, 0, 1.1116476, 0, 1.1116476, 0, -4.859166e-08, -3.44, 0.539, -1.995)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
-[node name="ponta-direita-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="2" unique_id=282421442]
+[node name="ponta-direita-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="2" unique_id=1575321334]
 transform = Transform3D(1.1116476, 0, 0, 0, 1.1116476, 0, 0, 0, 1.1116476, 0, 0.539, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
-[node name="meio-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="3" unique_id=1539447607]
+[node name="meio-balcao" parent="NavigationRegion3D/PROP_balcao-modular" index="3" unique_id=1300512590]
 transform = Transform3D(-4.859166e-08, 0, -1.1116476, 0, 1.1116476, 0, 1.1116476, 0, -4.859166e-08, -3.44, 0.539, -0.885)
 rotation_order = 0
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
@@ -632,7 +632,7 @@ offset_bottom = 202.0
 text = "ESCOLHER"
 
 [node name="Panel2" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1689214509]
-modulate = Color(1, 1, 1, 0.9887153)
+modulate = Color(1, 1, 1, 0.9604443)
 z_index = -1
 layout_mode = 0
 offset_left = 169.08728
@@ -660,7 +660,7 @@ scale = Vector2(0.2, 0.19947544)
 texture = ExtResource("25_vamgo")
 
 [node name="Panel3" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=884635700]
-modulate = Color(1, 1, 1, 0.9774306)
+modulate = Color(1, 1, 1, 0.9208885)
 z_index = -2
 layout_mode = 0
 offset_left = 369.08728
@@ -688,7 +688,7 @@ offset_bottom = 202.5
 text = "ESCOLHER"
 
 [node name="Panel4" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1704902061]
-modulate = Color(1, 1, 1, 0.9661458)
+modulate = Color(1, 1, 1, 0.88133276)
 z_index = -3
 layout_mode = 0
 offset_left = 569.0873
@@ -923,7 +923,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
 [node name="PROP_balcao_quina" parent="." unique_id=2111459800 instance=ExtResource("15_xdmf7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4124731)
 
-[node name="canto-balcao-esquerdo" parent="PROP_balcao_quina" index="0" unique_id=1401271767]
+[node name="canto-balcao-esquerdo" parent="PROP_balcao_quina" index="0" unique_id=1371456543]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
