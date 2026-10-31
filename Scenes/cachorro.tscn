@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://chm0pfw6f3mqw"]
+
+[ext_resource type="PackedScene" uid="uid://cd1mp5t00cquh" path="res://Scenes/cachorro_caramelo.tscn" id="1_2qs6m"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4n3oh"]
+radius = 1.9852339
+
+[node name="Cachorro" type="CharacterBody3D" unique_id=1173407344]
+
+[node name="CachorroCaramelo" parent="." unique_id=563521473 instance=ExtResource("1_2qs6m")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=759727984]
+shape = SubResource("SphereShape3D_4n3oh")
+
+[node name="Timer" type="Timer" parent="." unique_id=1619817059]
+one_shot = true
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1908487592]
+target_desired_distance = 2.5
+path_height_offset = 0.4
+
+[node name="InteractionTimer" type="Timer" parent="." unique_id=200468635]
+wait_time = 10.0
