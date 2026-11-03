@@ -186,6 +186,11 @@ glow_enabled = true
 
 [node name="Opcoes" parent="." unique_id=1935843921 instance=ExtResource("33_k504k")]
 
+[node name="Botao Voltar Balcao" type="CanvasLayer" parent="." unique_id=482491482]
+
+[node name="Control" parent="Botao Voltar Balcao" unique_id=1704514351 instance=ExtResource("8_1o021")]
+metadata/_edit_use_anchors_ = true
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=73148972]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002100706, 0, -0.001267314)
 navigation_mesh = SubResource("NavigationMesh_dijpm")
@@ -999,6 +1004,59 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.40
 [node name="PROP_quadro_4" parent="Itens/Quadros" unique_id=968971334 instance=ExtResource("49_c8e4o")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.379971, 1.6278334, 7.8605595)
 
+[node name="Balcao" type="Node" parent="Itens" unique_id=1297417226]
+
+[node name="PROP_balcao_quina" parent="Itens/Balcao" unique_id=2111459800 instance=ExtResource("15_xdmf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4124731)
+
+[node name="canto-balcao-esquerdo" parent="Itens/Balcao/PROP_balcao_quina" index="0" unique_id=2066891770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
+
+[node name="Luzes" type="Node" parent="Itens" unique_id=1905642359]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Itens/Luzes" unique_id=517859516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63457656, 6.0065355, -1.7756174)
+light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
+shadow_enabled = true
+omni_range = 37.0
+omni_attenuation = 0.6
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Itens/Luzes" unique_id=1969341608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9795504, 6.0065355, 13.112538)
+light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
+shadow_enabled = true
+omni_range = 37.0
+omni_attenuation = 0.6
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Itens/Luzes" unique_id=1492946671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6523557, 6.0065355, 15.444794)
+light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
+shadow_enabled = true
+omni_range = 10.213
+omni_attenuation = 0.6
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Itens/Luzes" unique_id=975302123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6260076, 2.6930704, 9.829665)
+light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
+shadow_enabled = true
+omni_range = 4.0
+omni_attenuation = 0.6
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Itens/Luzes" unique_id=900256836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9200559, 2.6930704, 9.829665)
+light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
+shadow_enabled = true
+omni_range = 4.0
+omni_attenuation = 0.6
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Itens/Luzes" unique_id=480101899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91534233, 6.0055294, 8.034904)
+light_color = Color(0.9843137, 0.90588236, 0.8784314, 1)
+shadow_enabled = true
+omni_range = 37.0
+omni_attenuation = 0.6
+
 [node name="Markers" type="Node" parent="." unique_id=1462406723]
 script = SubResource("GDScript_c5s60")
 
@@ -1030,20 +1088,6 @@ transform = Transform3D(0.5764322, 0.34534034, -0.74058473, 0, 0.9063077, 0.4226
 
 [node name="Mesa4" type="Marker3D" parent="Markers" unique_id=610266832]
 transform = Transform3D(0.5877852, -0.3225948, 0.74191713, 0, 0.9170601, 0.39874902, -0.8090169, -0.23437883, 0.5390343, 3.7366693, 1.8010143, 8.8368)
-
-[node name="Botao Voltar Balcao" type="CanvasLayer" parent="." unique_id=482491482]
-
-[node name="Control" parent="Botao Voltar Balcao" unique_id=1704514351 instance=ExtResource("8_1o021")]
-metadata/_edit_use_anchors_ = true
-
-[node name="Balcao" type="Node" parent="." unique_id=1297417226]
-
-[node name="PROP_balcao_quina" parent="." unique_id=2111459800 instance=ExtResource("15_xdmf7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4124731)
-
-[node name="canto-balcao-esquerdo" parent="PROP_balcao_quina" index="0" unique_id=2066891770]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33, 0, 0)
-surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
 
 [node name="MarkerNPCSinuca" type="Node" parent="." unique_id=459909132]
 
@@ -1130,50 +1174,6 @@ environment = SubResource("Environment_epgqu")
 [node name="PROP_rua_bar" parent="." unique_id=671284054 instance=ExtResource("51_06c8f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.61864376, 0.073500395, 3.1527493)
 
-[node name="Luzes" type="Node" parent="." unique_id=1905642359]
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Luzes" unique_id=517859516]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63457656, 6.0065355, -1.7756174)
-light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
-shadow_enabled = true
-omni_range = 37.0
-omni_attenuation = 0.6
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Luzes" unique_id=1969341608]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9795504, 6.0065355, 13.112538)
-light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
-shadow_enabled = true
-omni_range = 37.0
-omni_attenuation = 0.6
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="Luzes" unique_id=1492946671]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6523557, 6.0065355, 15.444794)
-light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
-shadow_enabled = true
-omni_range = 10.213
-omni_attenuation = 0.6
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="Luzes" unique_id=975302123]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6260076, 2.6930704, 9.829665)
-light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
-shadow_enabled = true
-omni_range = 4.0
-omni_attenuation = 0.6
-
-[node name="OmniLight3D6" type="OmniLight3D" parent="Luzes" unique_id=900256836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9200559, 2.6930704, 9.829665)
-light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
-shadow_enabled = true
-omni_range = 4.0
-omni_attenuation = 0.6
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Luzes" unique_id=480101899]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91534233, 6.0055294, 8.034904)
-light_color = Color(0.9843137, 0.90588236, 0.8784314, 1)
-shadow_enabled = true
-omni_range = 37.0
-omni_attenuation = 0.6
-
 [connection signal="song_selected" from="NavigationRegion3D/MusicasJukebox/CarroselContainer" to="NavigationRegion3D/Jukebox/Jukebox" method="_on_carrosel_container_song_selected"]
 [connection signal="pressed" from="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control/Panel/Button" to="NavigationRegion3D/MusicasJukebox/CarroselContainer" method="_on_button_pressed"]
 [connection signal="pressed" from="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control/Panel2/Button" to="NavigationRegion3D/MusicasJukebox/CarroselContainer" method="_on_button_pressed"]
@@ -1185,4 +1185,4 @@ omni_attenuation = 0.6
 
 [editable path="NavigationRegion3D/PROP_cadeira"]
 [editable path="NavigationRegion3D/PROP_balcao-modular"]
-[editable path="PROP_balcao_quina"]
+[editable path="Itens/Balcao/PROP_balcao_quina"]
