@@ -162,8 +162,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xvqk1")
 
-[sub_resource type="GDScript" id="GDScript_c5s60"]
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_pcysp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfwm2"]
@@ -173,6 +171,8 @@ albedo_color = Color(0.40752566, 0.1652529, 0.044275075, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3swae"]
 albedo_color = Color(1, 0.25882354, 0.25882354, 1)
+
+[sub_resource type="GDScript" id="GDScript_c5s60"]
 
 [sub_resource type="Environment" id="Environment_epgqu"]
 background_mode = 1
@@ -803,7 +803,201 @@ transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 7.169161, -0.006741047, 5.806357)
 
 [node name="Cachorro" parent="NavigationRegion3D" unique_id=1173407344 instance=ExtResource("57_qwd6u")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.493309, 0, 5.4061174)
+transform = Transform3D(0.007958353, 0, -0.49993667, 0, 0.5, 0, 0.49993667, 0, 0.007958353, -5.413871, 0, 5.012754)
+
+[node name="Itens" type="Node" parent="." unique_id=165591788]
+
+[node name="Paredes" type="Node" parent="Itens" unique_id=185805976]
+
+[node name="Banco Balcao" type="Node" parent="Itens" unique_id=1826270539]
+
+[node name="Banquinho" type="Node" parent="Itens/Banco Balcao" unique_id=1332195682]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho" unique_id=1207303653]
+transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 1.3962135, 0.29639375, -0.77786285)
+mesh = SubResource("CylinderMesh_pcysp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho" unique_id=957131151]
+transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 1.3955802, 0.4964289, -0.7763557)
+mesh = SubResource("CylinderMesh_gjgc6")
+surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho" unique_id=1304902852]
+transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, -2.1271977, 0.29639375, -0.77786285)
+mesh = SubResource("CylinderMesh_pcysp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho" unique_id=130052575]
+transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, -2.127831, 0.4964289, -0.7763557)
+mesh = SubResource("CylinderMesh_gjgc6")
+surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
+
+[node name="Banquinho2" type="Node" parent="Itens/Banco Balcao" unique_id=1537783166]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho2" unique_id=1259147982]
+transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 1.994981, 0.29639375, -0.77786285)
+mesh = SubResource("CylinderMesh_pcysp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho2" unique_id=805274666]
+transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 1.9943477, 0.4964289, -0.7763557)
+mesh = SubResource("CylinderMesh_gjgc6")
+surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho2" unique_id=1005601231]
+transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, -1.5284302, 0.29639375, -0.77786285)
+mesh = SubResource("CylinderMesh_pcysp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho2" unique_id=655220558]
+transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, -1.5290636, 0.4964289, -0.7763557)
+mesh = SubResource("CylinderMesh_gjgc6")
+surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
+
+[node name="Banquinho3" type="Node" parent="Itens/Banco Balcao" unique_id=1889421685]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho3" unique_id=233589509]
+transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 3.0641356, 0.29639375, -1.4478905)
+mesh = SubResource("CylinderMesh_pcysp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho3" unique_id=110047740]
+transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 3.063502, 0.4964289, -1.4463835)
+mesh = SubResource("CylinderMesh_gjgc6")
+surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
+
+[node name="Banquinho4" type="Node" parent="Itens/Banco Balcao" unique_id=817310555]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho4" unique_id=1342116333]
+transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 3.5211241, 0.29639375, -2.5202873)
+mesh = SubResource("CylinderMesh_pcysp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Itens/Banco Balcao/Banquinho4" unique_id=484596410]
+transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 3.5204906, 0.4964289, -2.51878)
+mesh = SubResource("CylinderMesh_gjgc6")
+surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
+
+[node name="CaixasCerveja" type="Node" parent="Itens" unique_id=822015859]
+
+[node name="Itens Aleatorios" type="Node" parent="Itens" unique_id=1664783920]
+
+[node name="Cerveja Prateleira 1" type="Node" parent="Itens/Itens Aleatorios" unique_id=1611795202]
+
+[node name="Cerveja Prateleira 2" type="Node" parent="Itens/Itens Aleatorios" unique_id=691435136]
+
+[node name="PROP_prateleira2" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=30778258 instance=ExtResource("52_yijut")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0924873, 1.3444234, -1.2191823)
+
+[node name="PROP_prateleira3" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=1885583028 instance=ExtResource("52_yijut")]
+transform = Transform3D(0.999229, 0, 0.039259832, 0, 1, 0, -0.039259832, 0, 0.999229, -1.7311964, 1.7003254, -3.952106)
+
+[node name="PROP_cerveja_schin" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=1728678915 instance=ExtResource("53_bbmo8")]
+transform = Transform3D(0.6012155, 0, 0.7990869, 0, 1, 0, -0.7990869, 0, 0.6012155, -6.0584526, 1.0216341, 0.5631966)
+
+[node name="PROP_cerveja_schin2" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=411781459 instance=ExtResource("53_bbmo8")]
+transform = Transform3D(0.6012155, 0, 0.7990869, 0, 1, 0, -0.7990869, 0, 0.6012155, -6.0584526, 1.0216341, 0.4606011)
+
+[node name="PROP_copo_americano" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=592770934 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -0.8735658)
+
+[node name="PROP_copo_americano2" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=1138663695 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -0.96147215)
+
+[node name="PROP_copo_americano3" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=1504198971 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.994327, 1.3741945, -1.0519707)
+
+[node name="PROP_copo_americano7" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=1775204410 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0984416, 1.3741945, -1.1245749)
+
+[node name="PROP_copo_americano4" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=694338664 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -1.3894536)
+
+[node name="PROP_copo_americano5" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=2025886257 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -1.4986236)
+
+[node name="PROP_copo_americano6" parent="Itens/Itens Aleatorios/Cerveja Prateleira 2" unique_id=917367992 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0783763, 1.3741945, -1.5832634)
+
+[node name="Cervejas avulsas" type="Node" parent="Itens" unique_id=1905849380]
+
+[node name="PROP_ypioca_prata" parent="Itens/Cervejas avulsas" unique_id=962629802 instance=ExtResource("19_76hng")]
+transform = Transform3D(-0.5154569, 0, -0.8569155, 0, 1, 0, 0.8569155, 0, -0.5154569, 0.9996768, 0.7721182, 2.3039215)
+
+[node name="PROP_ypioca_prata2" parent="Itens/Cervejas avulsas" unique_id=1079044036 instance=ExtResource("19_76hng")]
+transform = Transform3D(-0.5154569, 0, -0.8569155, 0, 1, 0, 0.8569155, 0, -0.5154569, 2.4643705, 1.1044886, -1.3620088)
+
+[node name="PROP_ypioca_prata3" parent="Itens/Cervejas avulsas" unique_id=1978636363 instance=ExtResource("19_76hng")]
+transform = Transform3D(-0.5154569, 0, -0.8569155, 0, 1, 0, 0.8569155, 0, -0.5154569, 2.626773, 1.1105027, -1.2423422)
+
+[node name="PROP_ypioca_amarela" parent="Itens/Cervejas avulsas" unique_id=878998562 instance=ExtResource("20_hkskg")]
+transform = Transform3D(-0.8886413, 0, 0.45860296, 0, 1, 0, -0.45860296, 0, -0.8886413, 1.1418561, 0.7740942, 2.2015417)
+
+[node name="PROP_ypioca_amarela2" parent="Itens/Cervejas avulsas" unique_id=789524397 instance=ExtResource("20_hkskg")]
+transform = Transform3D(-0.8886413, 0, 0.45860296, 0, 1, 0, -0.45860296, 0, -0.8886413, -2.7774892, 0.7671292, 1.8050137)
+
+[node name="PROP_cerveja" parent="Itens/Cervejas avulsas" unique_id=581328387 instance=ExtResource("22_44wyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1591885, -0.022084653, 7.6222367)
+
+[node name="PROP_cerveja2" parent="Itens/Cervejas avulsas" unique_id=686647740 instance=ExtResource("22_44wyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.081025, -0.020132601, 7.5102773)
+
+[node name="PROP_cerveja3" parent="Itens/Cervejas avulsas" unique_id=954066066 instance=ExtResource("22_44wyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.977526, -0.018676162, 7.5741763)
+
+[node name="PROP_cerveja4" parent="Itens/Cervejas avulsas" unique_id=1429110891 instance=ExtResource("22_44wyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04636, -0.027121127, 6.2504835)
+
+[node name="PROP_cerveja6" parent="Itens/Cervejas avulsas" unique_id=1345754391 instance=ExtResource("22_44wyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8222551, -0.031703115, 5.9345036)
+
+[node name="PROP_cerveja7" parent="Itens/Cervejas avulsas" unique_id=802321402 instance=ExtResource("22_44wyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8221908, -0.03553313, 1.6143787)
+
+[node name="PROP_rua_tamanho" parent="Itens/Cervejas avulsas" unique_id=1253847839 instance=ExtResource("32_xbg07")]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 0.6171551, 0, -53.571228)
+
+[node name="PROP_rua_tamanho2" parent="Itens/Cervejas avulsas" unique_id=877021475 instance=ExtResource("32_xbg07")]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -94.12479, 0, 3.1181393)
+
+[node name="PROP_copo_americano" parent="Itens/Cervejas avulsas" unique_id=2131427662 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2384598, 0.8017421, 7.3697424)
+
+[node name="PROP_copo_americano2" parent="Itens/Cervejas avulsas" unique_id=2088003634 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.720983, 0.78697395, 6.2686906)
+
+[node name="PROP_copo_americano3" parent="Itens/Cervejas avulsas" unique_id=472847302 instance=ExtResource("6_xodc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.629536, 0.78697395, 6.3207636)
+
+[node name="PROP_cerveja_skol" parent="Itens/Cervejas avulsas" unique_id=79027710 instance=ExtResource("33_okbyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7806973, 0.87143326, 3.7962554)
+
+[node name="PROP_prateleira" parent="Itens/Cervejas avulsas" unique_id=548209243 instance=ExtResource("52_yijut")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0924873, 1.003733, 0.13438368)
+
+[node name="Quadros" type="Node" parent="Itens" unique_id=1063493676]
+
+[node name="PROP_quadro_3" parent="Itens/Quadros" unique_id=1833386140 instance=ExtResource("46_1kwc2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8673017, 1.9498774, -2.845521)
+
+[node name="PROP_quadro_1" parent="Itens/Quadros" unique_id=873540559 instance=ExtResource("47_c8e4o")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -6.191348, 1.5339491, 4.090364)
+
+[node name="PROP_quadro_7" parent="Itens/Quadros" unique_id=179355859 instance=ExtResource("47_c8e4o")]
+transform = Transform3D(-0.9999999, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.9999999, 0.5508137, 1.5339491, 9.969757)
+
+[node name="PROP_quadro_2" parent="Itens/Quadros" unique_id=589421705 instance=ExtResource("48_m8rf6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.178368, 2.081974, 4.9540467)
+
+[node name="PROP_quadro_5" parent="Itens/Quadros" unique_id=105846603 instance=ExtResource("49_c8e4o")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.177401, 1.7225533, 5.84199)
+
+[node name="PROP_quadro_6" parent="Itens/Quadros" unique_id=1443820019 instance=ExtResource("50_m8rf6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.407307, 2.1719282, 6.698991)
+
+[node name="PROP_quadro_4" parent="Itens/Quadros" unique_id=968971334 instance=ExtResource("49_c8e4o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.379971, 1.6278334, 7.8605595)
 
 [node name="Markers" type="Node" parent="." unique_id=1462406723]
 script = SubResource("GDScript_c5s60")
@@ -837,8 +1031,6 @@ transform = Transform3D(0.5764322, 0.34534034, -0.74058473, 0, 0.9063077, 0.4226
 [node name="Mesa4" type="Marker3D" parent="Markers" unique_id=610266832]
 transform = Transform3D(0.5877852, -0.3225948, 0.74191713, 0, 0.9170601, 0.39874902, -0.8090169, -0.23437883, 0.5390343, 3.7366693, 1.8010143, 8.8368)
 
-[node name="Paredes" type="Node" parent="." unique_id=185805976]
-
 [node name="Botao Voltar Balcao" type="CanvasLayer" parent="." unique_id=482491482]
 
 [node name="Control" parent="Botao Voltar Balcao" unique_id=1704514351 instance=ExtResource("8_1o021")]
@@ -846,90 +1038,20 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Balcao" type="Node" parent="." unique_id=1297417226]
 
-[node name="Banco Balcao" type="Node" parent="." unique_id=1826270539]
-
-[node name="Banquinho" type="Node" parent="Banco Balcao" unique_id=1332195682]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Banco Balcao/Banquinho" unique_id=1207303653]
-transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 1.3962135, 0.29639375, -0.77786285)
-mesh = SubResource("CylinderMesh_pcysp")
-surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Banco Balcao/Banquinho" unique_id=957131151]
-transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 1.3955802, 0.4964289, -0.7763557)
-mesh = SubResource("CylinderMesh_gjgc6")
-surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Banco Balcao/Banquinho" unique_id=1304902852]
-transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, -2.1271977, 0.29639375, -0.77786285)
-mesh = SubResource("CylinderMesh_pcysp")
-surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Banco Balcao/Banquinho" unique_id=130052575]
-transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, -2.127831, 0.4964289, -0.7763557)
-mesh = SubResource("CylinderMesh_gjgc6")
-surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
-
-[node name="Banquinho2" type="Node" parent="Banco Balcao" unique_id=1537783166]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Banco Balcao/Banquinho2" unique_id=1259147982]
-transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 1.994981, 0.29639375, -0.77786285)
-mesh = SubResource("CylinderMesh_pcysp")
-surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Banco Balcao/Banquinho2" unique_id=805274666]
-transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 1.9943477, 0.4964289, -0.7763557)
-mesh = SubResource("CylinderMesh_gjgc6")
-surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Banco Balcao/Banquinho2" unique_id=1005601231]
-transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, -1.5284302, 0.29639375, -0.77786285)
-mesh = SubResource("CylinderMesh_pcysp")
-surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Banco Balcao/Banquinho2" unique_id=655220558]
-transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, -1.5290636, 0.4964289, -0.7763557)
-mesh = SubResource("CylinderMesh_gjgc6")
-surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
-
-[node name="Banquinho3" type="Node" parent="Banco Balcao" unique_id=1889421685]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Banco Balcao/Banquinho3" unique_id=233589509]
-transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 3.0641356, 0.29639375, -1.4478905)
-mesh = SubResource("CylinderMesh_pcysp")
-surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Banco Balcao/Banquinho3" unique_id=110047740]
-transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 3.063502, 0.4964289, -1.4463835)
-mesh = SubResource("CylinderMesh_gjgc6")
-surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
-
-[node name="Banquinho4" type="Node" parent="Banco Balcao" unique_id=817310555]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Banco Balcao/Banquinho4" unique_id=1342116333]
-transform = Transform3D(0.062226817, 0, 0, 0, 0.17865969, 0, 0, 0, 0.08027157, 3.5211241, 0.29639375, -2.5202873)
-mesh = SubResource("CylinderMesh_pcysp")
-surface_material_override/0 = SubResource("StandardMaterial3D_bfwm2")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Banco Balcao/Banquinho4" unique_id=484596410]
-transform = Transform3D(0.20529608, 0, 0, 0, 0.015647296, 0, 0, 0, 0.22330964, 3.5204906, 0.4964289, -2.51878)
-mesh = SubResource("CylinderMesh_gjgc6")
-surface_material_override/0 = SubResource("StandardMaterial3D_3swae")
-
-[node name="CaixasCerveja" type="Node" parent="." unique_id=822015859]
-
-[node name="Itens Aleatorios" type="Node" parent="." unique_id=1664783920]
-
-[node name="Cerveja Prateleira 1" type="Node" parent="Itens Aleatorios" unique_id=1611795202]
-
-[node name="Cerveja Prateleira 2" type="Node" parent="Itens Aleatorios" unique_id=691435136]
-
 [node name="PROP_balcao_quina" parent="." unique_id=2111459800 instance=ExtResource("15_xdmf7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4124731)
 
 [node name="canto-balcao-esquerdo" parent="PROP_balcao_quina" index="0" unique_id=2066891770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_1bo1k")
+
+[node name="MarkerNPCSinuca" type="Node" parent="." unique_id=459909132]
+
+[node name="Marker3D" type="Marker3D" parent="MarkerNPCSinuca" unique_id=365401618 groups=["pontos_andar"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0588307, 0.5857744, 5.7352786)
+
+[node name="Marker3D2" type="Marker3D" parent="MarkerNPCSinuca" unique_id=865252125 groups=["pontos_andar"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5301733, 0.5857744, 1.6454353)
 
 [node name="MarkerNPC" type="Node" parent="." unique_id=1464157688]
 
@@ -983,59 +1105,6 @@ cena_final = ExtResource("41_qyr0r")
 [node name="Marker3D2" type="Marker3D" parent="SpawnNPC" unique_id=553273096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2687845, 0, 0)
 
-[node name="Cervejas avulsas" type="Node" parent="." unique_id=1905849380]
-
-[node name="PROP_ypioca_prata" parent="Cervejas avulsas" unique_id=962629802 instance=ExtResource("19_76hng")]
-transform = Transform3D(-0.5154569, 0, -0.8569155, 0, 1, 0, 0.8569155, 0, -0.5154569, 0.9996768, 0.7721182, 2.3039215)
-
-[node name="PROP_ypioca_prata2" parent="Cervejas avulsas" unique_id=1079044036 instance=ExtResource("19_76hng")]
-transform = Transform3D(-0.5154569, 0, -0.8569155, 0, 1, 0, 0.8569155, 0, -0.5154569, 2.4643705, 1.1044886, -1.3620088)
-
-[node name="PROP_ypioca_prata3" parent="Cervejas avulsas" unique_id=1978636363 instance=ExtResource("19_76hng")]
-transform = Transform3D(-0.5154569, 0, -0.8569155, 0, 1, 0, 0.8569155, 0, -0.5154569, 2.626773, 1.1105027, -1.2423422)
-
-[node name="PROP_ypioca_amarela" parent="Cervejas avulsas" unique_id=878998562 instance=ExtResource("20_hkskg")]
-transform = Transform3D(-0.8886413, 0, 0.45860296, 0, 1, 0, -0.45860296, 0, -0.8886413, 1.1418561, 0.7740942, 2.2015417)
-
-[node name="PROP_ypioca_amarela2" parent="Cervejas avulsas" unique_id=789524397 instance=ExtResource("20_hkskg")]
-transform = Transform3D(-0.8886413, 0, 0.45860296, 0, 1, 0, -0.45860296, 0, -0.8886413, -2.7774892, 0.7671292, 1.8050137)
-
-[node name="PROP_cerveja" parent="Cervejas avulsas" unique_id=581328387 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1591885, -0.022084653, 7.6222367)
-
-[node name="PROP_cerveja2" parent="Cervejas avulsas" unique_id=686647740 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.081025, -0.020132601, 7.5102773)
-
-[node name="PROP_cerveja3" parent="Cervejas avulsas" unique_id=954066066 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.977526, -0.018676162, 7.5741763)
-
-[node name="PROP_cerveja4" parent="Cervejas avulsas" unique_id=1429110891 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04636, -0.027121127, 6.2504835)
-
-[node name="PROP_cerveja6" parent="Cervejas avulsas" unique_id=1345754391 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8222551, -0.031703115, 5.9345036)
-
-[node name="PROP_cerveja7" parent="Cervejas avulsas" unique_id=802321402 instance=ExtResource("22_44wyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8221908, -0.03553313, 1.6143787)
-
-[node name="PROP_rua_tamanho" parent="Cervejas avulsas" unique_id=1253847839 instance=ExtResource("32_xbg07")]
-transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 0.6171551, 0, -53.571228)
-
-[node name="PROP_rua_tamanho2" parent="Cervejas avulsas" unique_id=877021475 instance=ExtResource("32_xbg07")]
-transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -94.12479, 0, 3.1181393)
-
-[node name="PROP_copo_americano" parent="Cervejas avulsas" unique_id=2131427662 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2384598, 0.8017421, 7.3697424)
-
-[node name="PROP_copo_americano2" parent="Cervejas avulsas" unique_id=2088003634 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.720983, 0.78697395, 6.2686906)
-
-[node name="PROP_copo_americano3" parent="Cervejas avulsas" unique_id=472847302 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.629536, 0.78697395, 6.3207636)
-
-[node name="PROP_cerveja_skol" parent="Cervejas avulsas" unique_id=79027710 instance=ExtResource("33_okbyl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7806973, 0.87143326, 3.7962554)
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1039267228]
 stream = ExtResource("38_m7b6h")
 autoplay = true
@@ -1058,109 +1127,52 @@ script = ExtResource("45_epgqu")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=872673061]
 environment = SubResource("Environment_epgqu")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=517859516]
+[node name="PROP_rua_bar" parent="." unique_id=671284054 instance=ExtResource("51_06c8f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.61864376, 0.073500395, 3.1527493)
+
+[node name="Luzes" type="Node" parent="." unique_id=1905642359]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Luzes" unique_id=517859516]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63457656, 6.0065355, -1.7756174)
 light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
 shadow_enabled = true
 omni_range = 37.0
 omni_attenuation = 0.6
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1969341608]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Luzes" unique_id=1969341608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9795504, 6.0065355, 13.112538)
 light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
 shadow_enabled = true
 omni_range = 37.0
 omni_attenuation = 0.6
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1492946671]
+[node name="OmniLight3D4" type="OmniLight3D" parent="Luzes" unique_id=1492946671]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6523557, 6.0065355, 15.444794)
 light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
 shadow_enabled = true
 omni_range = 10.213
 omni_attenuation = 0.6
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=975302123]
+[node name="OmniLight3D5" type="OmniLight3D" parent="Luzes" unique_id=975302123]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6260076, 2.6930704, 9.829665)
 light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
 shadow_enabled = true
 omni_range = 4.0
 omni_attenuation = 0.6
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=900256836]
+[node name="OmniLight3D6" type="OmniLight3D" parent="Luzes" unique_id=900256836]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9200559, 2.6930704, 9.829665)
 light_color = Color(0.98540896, 0.9072869, 0.87794244, 1)
 shadow_enabled = true
 omni_range = 4.0
 omni_attenuation = 0.6
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=480101899]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Luzes" unique_id=480101899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91534233, 6.0055294, 8.034904)
 light_color = Color(0.9843137, 0.90588236, 0.8784314, 1)
 shadow_enabled = true
 omni_range = 37.0
 omni_attenuation = 0.6
-
-[node name="PROP_rua_bar" parent="." unique_id=671284054 instance=ExtResource("51_06c8f")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.61864376, 0.073500395, 3.1527493)
-
-[node name="PROP_prateleira" parent="." unique_id=548209243 instance=ExtResource("52_yijut")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0924873, 1.003733, 0.13438368)
-
-[node name="Quadros" type="Node" parent="." unique_id=1063493676]
-
-[node name="PROP_quadro_3" parent="Quadros" unique_id=1833386140 instance=ExtResource("46_1kwc2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8673017, 1.9498774, -2.845521)
-
-[node name="PROP_quadro_1" parent="Quadros" unique_id=873540559 instance=ExtResource("47_c8e4o")]
-transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -6.191348, 1.5339491, 4.090364)
-
-[node name="PROP_quadro_7" parent="Quadros" unique_id=179355859 instance=ExtResource("47_c8e4o")]
-transform = Transform3D(-0.9999999, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.9999999, 0.5508137, 1.5339491, 9.969757)
-
-[node name="PROP_quadro_2" parent="Quadros" unique_id=589421705 instance=ExtResource("48_m8rf6")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.178368, 2.081974, 4.9540467)
-
-[node name="PROP_quadro_5" parent="Quadros" unique_id=105846603 instance=ExtResource("49_c8e4o")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.177401, 1.7225533, 5.84199)
-
-[node name="PROP_quadro_6" parent="Quadros" unique_id=1443820019 instance=ExtResource("50_m8rf6")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.407307, 2.1719282, 6.698991)
-
-[node name="PROP_quadro_4" parent="Quadros" unique_id=968971334 instance=ExtResource("49_c8e4o")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.379971, 1.6278334, 7.8605595)
-
-[node name="PROP_prateleira2" parent="." unique_id=30778258 instance=ExtResource("52_yijut")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.0924873, 1.3444234, -1.2191823)
-
-[node name="PROP_prateleira3" parent="." unique_id=1885583028 instance=ExtResource("52_yijut")]
-transform = Transform3D(0.999229, 0, 0.039259832, 0, 1, 0, -0.039259832, 0, 0.999229, -1.7311964, 1.7003254, -3.952106)
-
-[node name="PROP_cerveja_schin" parent="." unique_id=1728678915 instance=ExtResource("53_bbmo8")]
-transform = Transform3D(0.6012155, 0, 0.7990869, 0, 1, 0, -0.7990869, 0, 0.6012155, -6.0584526, 1.0216341, 0.5631966)
-
-[node name="PROP_cerveja_schin2" parent="." unique_id=411781459 instance=ExtResource("53_bbmo8")]
-transform = Transform3D(0.6012155, 0, 0.7990869, 0, 1, 0, -0.7990869, 0, 0.6012155, -6.0584526, 1.0216341, 0.4606011)
-
-[node name="PROP_copo_americano" parent="." unique_id=592770934 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -0.8735658)
-
-[node name="PROP_copo_americano2" parent="." unique_id=1138663695 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -0.96147215)
-
-[node name="PROP_copo_americano3" parent="." unique_id=1504198971 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.994327, 1.3741945, -1.0519707)
-
-[node name="PROP_copo_americano7" parent="." unique_id=1775204410 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0984416, 1.3741945, -1.1245749)
-
-[node name="PROP_copo_americano4" parent="." unique_id=694338664 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -1.3894536)
-
-[node name="PROP_copo_americano5" parent="." unique_id=2025886257 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.035524, 1.3741945, -1.4986236)
-
-[node name="PROP_copo_americano6" parent="." unique_id=917367992 instance=ExtResource("6_xodc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0783763, 1.3741945, -1.5832634)
 
 [connection signal="song_selected" from="NavigationRegion3D/MusicasJukebox/CarroselContainer" to="NavigationRegion3D/Jukebox/Jukebox" method="_on_carrosel_container_song_selected"]
 [connection signal="pressed" from="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control/Panel/Button" to="NavigationRegion3D/MusicasJukebox/CarroselContainer" method="_on_button_pressed"]

@@ -1084,7 +1084,7 @@ _data = {
 
 [node name="CachorroCaramelo" unique_id=563521473 instance=ExtResource("1_ag23x")]
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(364925840) index="0" unique_id=1329560248]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1946649442) index="0" unique_id=1159298963]
 bones/0/position = Vector3(0, -0.0017954882, 0.0112283155)
 bones/1/rotation = Quaternion(0.11778754, -3.5513838e-07, -4.212407e-08, 0.9930389)
 bones/2/rotation = Quaternion(0.26699325, 3.063263e-08, -1.824817e-07, 0.9636985)
