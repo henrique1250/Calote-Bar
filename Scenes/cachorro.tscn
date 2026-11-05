@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://chm0pfw6f3mqw"]
+
+[ext_resource type="PackedScene" uid="uid://cd1mp5t00cquh" path="res://Scenes/cachorro_caramelo.tscn" id="1_2qs6m"]
+[ext_resource type="Texture2D" uid="uid://dkn6xwplapoq0" path="res://art/Personagens/CachorroCaramelo/Textura/CachorroCarameloColor.png" id="2_lyi5r"]
+[ext_resource type="Texture2D" uid="uid://bru410foqc877" path="res://art/Personagens/CachorroCaramelo/Textura/OlhoCachorroCaramelo.png" id="3_ll7rl"]
+[ext_resource type="Texture2D" uid="uid://bfncwsjihnasf" path="res://art/Personagens/CachorroCaramelo/Textura/DenteCachorroCaramelo.png" id="4_67jng"]
+[ext_resource type="Texture2D" uid="uid://c4gri1jijt6rk" path="res://art/Personagens/CachorroCaramelo/Textura/LinguaCachorroCarameloColor.png" id="5_4e2n8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lrl4p"]
+albedo_texture = ExtResource("2_lyi5r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfd02"]
+albedo_texture = ExtResource("3_ll7rl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjhkl"]
+albedo_texture = ExtResource("4_67jng")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wo5l7"]
+albedo_texture = ExtResource("5_4e2n8")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4n3oh"]
+radius = 1.9852339
+
+[node name="Cachorro" type="CharacterBody3D" unique_id=1173407344]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CachorroCaramelo" parent="." unique_id=563521473 instance=ExtResource("1_2qs6m")]
+
+[node name="CachorroCaramelo" parent="CachorroCaramelo/Armature/Skeleton3D" parent_id_path=PackedInt32Array(563521473, 1159298963) index="0" unique_id=246155493]
+surface_material_override/0 = SubResource("StandardMaterial3D_lrl4p")
+surface_material_override/1 = SubResource("StandardMaterial3D_pfd02")
+surface_material_override/2 = SubResource("StandardMaterial3D_hjhkl")
+surface_material_override/3 = SubResource("StandardMaterial3D_wo5l7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=759727984]
+shape = SubResource("SphereShape3D_4n3oh")
+
+[node name="Timer" type="Timer" parent="." unique_id=1619817059]
+one_shot = true
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1908487592]
+target_desired_distance = 2.5
+path_height_offset = 0.4
+
+[node name="InteractionTimer" type="Timer" parent="." unique_id=200468635]
+wait_time = 10.0
+
+[editable path="CachorroCaramelo"]
