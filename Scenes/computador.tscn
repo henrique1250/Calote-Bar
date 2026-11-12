@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b8a3j7wkj086s"]
+
+[ext_resource type="PackedScene" uid="uid://ls7pngccguu8" path="res://art/assets/old_computer.glb" id="1_fxa6l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fxa6l"]
+size = Vector3(0.54052734, 0.76538086, 0.506897)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fxa6l"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_fxa6l"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfdb7"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_fxa6l")
+
+[node name="PCscene" type="StaticBody3D" unique_id=757331727]
+collision_layer = 5
+
+[node name="Computador" parent="." unique_id=558087073 instance=ExtResource("1_fxa6l")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2108760445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010498047, 0.41110468, -0.013092041)
+shape = SubResource("BoxShape3D_fxa6l")
+
+[node name="PCScreen" type="MeshInstance3D" parent="." unique_id=728999462]
+transform = Transform3D(-0.0012981041, -1.0085094, 0, 0.17582509, -0.0074457536, 0, 0, 0, 0.21072048, -0.25236112, 0.51870656, -0.018354163)
+mesh = SubResource("PlaneMesh_fxa6l")
+surface_material_override/0 = SubResource("StandardMaterial3D_jfdb7")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=560639590]
+size = Vector2i(640, 480)
+
+[node name="Label" type="Label" parent="SubViewport" unique_id=1781159715]
+offset_right = 40.0
+offset_bottom = 23.0

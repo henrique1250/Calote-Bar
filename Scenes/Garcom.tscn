@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bkd5m344ukpky"]
 
 [ext_resource type="PackedScene" uid="uid://dyk7s0wyqbbdu" path="res://art/Personagens/PersonagemPrincipal/PesonagemPrincipalTpose.fbx" id="1_a2h7e"]
-[ext_resource type="Script" uid="uid://dgd5b1acqp755" path="res://Scenes/garcom.gd" id="1_i4cmp"]
+[ext_resource type="Script" path="res://Scenes/garcom.gd" id="1_i4cmp"]
+[ext_resource type="Script" uid="uid://eag7lleqeme8" path="res://Scripts/movimentacao.gd" id="1_i4kk2"]
 [ext_resource type="Texture2D" uid="uid://bl2j2dpb0is3k" path="res://art/Personagens/PersonagemPrincipal/PesonagemPrincipalTpose.fbm/PeleGarcom.png" id="5_hyr2r"]
 [ext_resource type="Texture2D" uid="uid://dvuqn1sb0tmed" path="res://art/Personagens/PersonagemPrincipal/PesonagemPrincipalTpose.fbm/OlhoGarcomColor.png" id="6_i4cmp"]
 [ext_resource type="Texture2D" uid="uid://bw4wv3g3w5ubg" path="res://art/Personagens/PersonagemPrincipal/PesonagemPrincipalTpose.fbm/SobrancelhaGarcomColor.png" id="7_i4kk2"]
@@ -45,14 +46,17 @@ _data = {
 &"Encostado": ExtResource("12_i4kk2")
 }
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j0k62"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i4kk2"]
 
 [node name="Garcom" type="CharacterBody3D" unique_id=609313992]
+collision_layer = 2
+script = ExtResource("1_i4kk2")
 
 [node name="PesonagemPrincipalTpose" parent="." unique_id=1602572380 instance=ExtResource("1_a2h7e")]
+visible = false
 script = ExtResource("1_i4cmp")
 
-[node name="Skeleton3D" parent="PesonagemPrincipalTpose/OssoGarcom" parent_id_path=PackedInt32Array(1602572380, 2136949335) index="0" unique_id=1057604856]
+[node name="Skeleton3D" parent="PesonagemPrincipalTpose/OssoGarcom" parent_id_path=PackedInt32Array(1602572380, 198436927) index="0" unique_id=636853661]
 bones/1/rotation = Quaternion(-0.27095088, 0, 0, 0.9625932)
 bones/2/rotation = Quaternion(-0.22580469, 0, 0, 0.9741726)
 bones/3/rotation = Quaternion(-0.0019900645, -0.014445767, -0.8375002, 0.5462424)
@@ -102,7 +106,7 @@ bones/56/rotation = Quaternion(-0.017435707, 0.1707262, 0.25568843, 0.9514053)
 bones/57/rotation = Quaternion(0.33579427, 0.12835433, 0.15115257, 0.92082596)
 bones/58/rotation = Quaternion(0.004657642, -4.0040493e-07, -0.046069205, 0.9989274)
 
-[node name="Garcom" parent="PesonagemPrincipalTpose/OssoGarcom/Skeleton3D" index="0" unique_id=1474036036]
+[node name="Garcom" parent="PesonagemPrincipalTpose/OssoGarcom/Skeleton3D" index="0" unique_id=271570349]
 surface_material_override/0 = SubResource("StandardMaterial3D_wtsw0")
 surface_material_override/1 = SubResource("StandardMaterial3D_ffy7r")
 surface_material_override/2 = SubResource("StandardMaterial3D_540t3")
@@ -121,8 +125,13 @@ bone_idx = 7
 libraries/Garcom = SubResource("AnimationLibrary_jreok")
 autoplay = &"Garcom/Encostado"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1869402351]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9110376, 0)
-shape = SubResource("CapsuleShape3D_j0k62")
+[node name="Head" type="Node3D" parent="." unique_id=1470706138]
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=341566594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0620239, -0.41379768)
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=445342013]
+shape = SubResource("CapsuleShape3D_i4kk2")
 
 [editable path="PesonagemPrincipalTpose"]

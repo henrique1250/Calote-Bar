@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dq8r3qx3v51nb" path="res://Assets/PROP_cerveja_brahma.glb" id="4_qkhv8"]
 [ext_resource type="PackedScene" uid="uid://bgpqkfmxj2qd0" path="res://Scenes/jukebox.tscn" id="5_hjw3j"]
 [ext_resource type="PackedScene" uid="uid://bvf5q3ifins6d" path="res://Assets/PROP_cerveja_heineken.glb" id="5_j1a25"]
-[ext_resource type="Script" path="res://Scenes/camera.gd" id="6_c5s60"]
+[ext_resource type="Script" uid="uid://balnxmcje74xp" path="res://Scenes/camera.gd" id="6_c5s60"]
 [ext_resource type="PackedScene" uid="uid://kv58n18wn0ax" path="res://Assets/PROP_enguadados.glb" id="6_xdmf7"]
 [ext_resource type="PackedScene" uid="uid://0v37sbgbd5au" path="res://Assets/PROP_copo_americano.glb" id="6_xodc5"]
 [ext_resource type="PackedScene" uid="uid://i5yqwk0mold5" path="res://Scenes/voltar_balcao.tscn" id="8_1o021"]
@@ -181,6 +181,8 @@ ambient_light_source = 3
 ssr_enabled = true
 ssil_enabled = true
 glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qwd6u"]
 
 [node name="Node" type="Node3D" unique_id=1891772111]
 
@@ -638,7 +640,7 @@ offset_bottom = 202.0
 text = "ESCOLHER"
 
 [node name="Panel2" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1689214509]
-modulate = Color(1, 1, 1, 0.97065973)
+modulate = Color(1, 1, 1, 0.959375)
 z_index = -1
 layout_mode = 0
 offset_left = 169.08728
@@ -666,7 +668,7 @@ scale = Vector2(0.2, 0.19947544)
 texture = ExtResource("25_vamgo")
 
 [node name="Panel3" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=884635700]
-modulate = Color(1, 1, 1, 0.94131947)
+modulate = Color(1, 1, 1, 0.91875)
 z_index = -2
 layout_mode = 0
 offset_left = 369.08728
@@ -694,7 +696,7 @@ offset_bottom = 202.5
 text = "ESCOLHER"
 
 [node name="Panel4" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1704902061]
-modulate = Color(1, 1, 1, 0.91197914)
+modulate = Color(1, 1, 1, 0.878125)
 z_index = -3
 layout_mode = 0
 offset_left = 569.0873
@@ -748,9 +750,6 @@ offset_top = 47.0
 offset_right = -32.0
 offset_bottom = 70.0
 text = "VOLUME"
-
-[node name="Garcom" parent="NavigationRegion3D" unique_id=609313992 instance=ExtResource("32_vamgo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.28318048, 0.010484576, -2.0220118)
 
 [node name="PROP_enguadados2" parent="NavigationRegion3D" unique_id=1824424293 instance=ExtResource("6_xdmf7")]
 transform = Transform3D(-0.5697243, 0, -0.8218359, 0, 1, 0, 0.8218359, 0, -0.5697243, 5.588847, 0.06407726, -0.9396063)
@@ -1062,6 +1061,7 @@ script = SubResource("GDScript_c5s60")
 
 [node name="Camera3D" type="Camera3D" parent="Markers" unique_id=950510579 node_paths=PackedStringArray("marker_geral") groups=["main_camera"]]
 transform = Transform3D(-0.9993134, -0.0046586217, 0.03675659, 0.011395543, 0.90532905, 0.42455798, -0.035254665, 0.4246853, -0.9046544, 0.24687397, 1.8363862, -2.5701952)
+visible = false
 script = ExtResource("6_c5s60")
 marker_geral = NodePath("../Marker3D")
 
@@ -1173,6 +1173,21 @@ environment = SubResource("Environment_epgqu")
 
 [node name="PROP_rua_bar" parent="." unique_id=671284054 instance=ExtResource("51_06c8f")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.61864376, 0.073500395, 3.1527493)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=966978236]
+transform = Transform3D(16.632837, 0, 0, 0, 1, 0, 0, 0, 26.023533, 0.0014182329, -0.7640748, 2.3684525)
+use_collision = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1425243582]
+transform = Transform3D(6.928174, 0, 0, 0, 3.530574, 0, 0, 0, 1.4376178, 0.0014182329, 0.8003684, -4.009059)
+use_collision = true
+
+[node name="Garcom" parent="." unique_id=609313992 instance=ExtResource("32_vamgo")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.5543642, -2.2215238)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Garcom" unique_id=1410510377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.711499e-09, 0.9521104, -0.11108661)
+shape = SubResource("CapsuleShape3D_qwd6u")
 
 [connection signal="song_selected" from="NavigationRegion3D/MusicasJukebox/CarroselContainer" to="NavigationRegion3D/Jukebox/Jukebox" method="_on_carrosel_container_song_selected"]
 [connection signal="pressed" from="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control/Panel/Button" to="NavigationRegion3D/MusicasJukebox/CarroselContainer" method="_on_button_pressed"]
