@@ -3,21 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://ls7pngccguu8" path="res://art/assets/old_computer.glb" id="1_fxa6l"]
 [ext_resource type="Script" uid="uid://dx8ol8a0mp0li" path="res://Scripts/computador.gd" id="1_x8vny"]
 [ext_resource type="PackedScene" uid="uid://clfay7p6m8wil" path="res://Scenes/PCControle.tscn" id="2_jfdb7"]
-[ext_resource type="Texture2D" uid="uid://dmoj1ilj0cre8" path="res://art/texturas/papel-parede-windows.webp" id="3_x7cou"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fxa6l"]
 size = Vector3(0.8366699, 0.76538086, 0.506897)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fxa6l"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_fxa6l"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x8vny"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfdb7"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_fxa6l")
+albedo_texture = SubResource("ViewportTexture_x8vny")
 emission_enabled = true
-emission_texture = ExtResource("3_x7cou")
 
 [node name="PCscene" type="StaticBody3D" unique_id=757331727]
 collision_layer = 4
@@ -31,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15856934, 0.41110468, -0.0
 shape = SubResource("BoxShape3D_fxa6l")
 
 [node name="PCScreen" type="MeshInstance3D" parent="." unique_id=728999462]
-transform = Transform3D(-0.0015292157, -1.0068299, 6.71463e-16, 9.5746655e-09, -3.072528e-10, -0.17571259, 0.21904282, -0.0070290365, 7.680642e-09, -0.25310552, 0.52058464, -0.018354163)
+transform = Transform3D(-0.0015292157, -1.0068299, 6.71463e-16, 9.5746655e-09, -3.072528e-10, -0.17571259, 0.21904282, -0.0070290365, 7.680642e-09, -0.25317094, 0.52058464, -0.018354163)
 mesh = SubResource("PlaneMesh_fxa6l")
 surface_material_override/0 = SubResource("StandardMaterial3D_jfdb7")
 

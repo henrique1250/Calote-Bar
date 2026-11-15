@@ -28,6 +28,17 @@ func _input(event: InputEvent) -> void:
 		else:
 			sub_viewport.push_input(event)
 			
+	elif event is InputEventMouseButton:
+		
+		if event.button_index == MOUSE_BUTTON_LEFT or event.button_index == MOUSE_BUTTON_MIDDLE:
+			var mouse_event = InputEventMouseButton.new()
+			mouse_event.button_index = event.button_index
+			mouse_event.pressed = event.pressed
+			mouse_event.position = pc_controler.pc_mouse_pos
+			mouse_event.global_position = pc_controler.pc_mouse_pos	
+			
+			sub_viewport.push_input(mouse_event)
+			
 	elif event is InputEventMouseMotion:
 		pc_controler.pc_mouse_pos += event.relative
 		pc_controler.pc_mouse_pos.x = clamp(pc_controler.pc_mouse_pos.x, 0.0, sub_viewport.size.x  - 10.0)
