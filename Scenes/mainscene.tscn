@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dq8r3qx3v51nb" path="res://Assets/PROP_cerveja_brahma.glb" id="4_qkhv8"]
 [ext_resource type="PackedScene" uid="uid://bgpqkfmxj2qd0" path="res://Scenes/jukebox.tscn" id="5_hjw3j"]
 [ext_resource type="PackedScene" uid="uid://bvf5q3ifins6d" path="res://Assets/PROP_cerveja_heineken.glb" id="5_j1a25"]
-[ext_resource type="Script" uid="uid://balnxmcje74xp" path="res://Scenes/camera.gd" id="6_c5s60"]
 [ext_resource type="PackedScene" uid="uid://kv58n18wn0ax" path="res://Assets/PROP_enguadados.glb" id="6_xdmf7"]
 [ext_resource type="PackedScene" uid="uid://0v37sbgbd5au" path="res://Assets/PROP_copo_americano.glb" id="6_xodc5"]
 [ext_resource type="PackedScene" uid="uid://i5yqwk0mold5" path="res://Scenes/voltar_balcao.tscn" id="8_1o021"]
@@ -30,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://7ht64rvyhmfs" path="res://Assets/PROP_ypioca_prata.glb" id="19_76hng"]
 [ext_resource type="PackedScene" uid="uid://ij2bnnhp3swh" path="res://Assets/PROP_ypioca_amarela.glb" id="20_hkskg"]
 [ext_resource type="PackedScene" uid="uid://dkbd1cmb6p6gj" path="res://art/assets/PROP_cerveja.glb" id="22_44wyh"]
-[ext_resource type="AudioStream" uid="uid://j0pi6l8pq2ee" path="res://songs/sfx/Selecionar.mp3" id="25_jijtd"]
 [ext_resource type="Texture2D" uid="uid://djw5oo8j2soyy" path="res://songs/songs_caps/Provas.png" id="25_mp7gq"]
 [ext_resource type="Texture2D" uid="uid://d2bia08c71bij" path="res://songs/songs_caps/163_Sem_Titulo_20260823005822.png" id="25_vamgo"]
 [ext_resource type="Texture2D" uid="uid://onu645idhofd" path="res://songs/songs_caps/Boteco Azul.png" id="27_fwdu2"]
@@ -57,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://b4aabjn81p145" path="res://art/assets/PROP_prateleira.glb" id="52_yijut"]
 [ext_resource type="PackedScene" uid="uid://d37survckqb6y" path="res://Assets/PROP_cerveja_schin.glb" id="53_bbmo8"]
 [ext_resource type="PackedScene" uid="uid://chm0pfw6f3mqw" path="res://Scenes/cachorro.tscn" id="57_qwd6u"]
+[ext_resource type="PackedScene" uid="uid://b8a3j7wkj086s" path="res://Scenes/computador.tscn" id="58_m58b1"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_dijpm"]
 vertices = PackedVector3Array(-2.5623102, 0.38094014, -2.391923, -0.8123102, 0.38094014, -2.391923, -0.31231022, 0.38094014, -2.891923, -2.8123102, 0.38094014, -4.641923, -6.31231, 0.38094014, -2.641923, -4.56231, 0.38094014, -2.641923, -4.56231, 0.38094014, -4.391923, -6.31231, 0.38094014, -4.891923, 2.4376898, 0.38094014, -4.391923, 4.18769, 0.38094014, -4.641923, 7.68769, 0.38094014, -4.891923, 2.4376898, 0.38094014, -2.391923, 7.18769, 0.38094014, -1.141923, 7.68769, 0.38094014, -0.14192295, 4.43769, 0.38094014, -2.391923, -3.0623102, 0.38094014, -0.39192295, -3.3123102, 0.38094014, -1.141923, -3.8123102, 0.38094014, -0.64192295, -5.06231, 0.38094014, -0.64192295, -6.31231, 0.38094014, -1.391923, -6.31231, 0.63094014, -0.64192295, -5.31231, 0.38094014, -0.39192295, -6.31231, 0.38094014, 6.108077, -6.31231, 0.38094014, 10.358077, -2.5623102, 0.38094014, 10.358077, -3.3123102, 0.38094014, 7.858077, -4.56231, 0.38094014, 6.858077, -5.31231, 0.38094014, 0.60807705, -1.0623102, 0.38094014, 0.85807705, -1.0623102, 0.38094014, 1.858077, -0.5623102, 0.38094014, 2.108077, 0.43768978, 0.38094014, 0.85807705, -2.0623102, 0.38094014, -0.14192295, -1.8123102, 0.38094014, 0.60807705, 1.9376898, 0.38094014, -0.39192295, -6.31231, 0.63094014, 1.108077, -6.31231, 0.63094014, 1.608077, -4.81231, 0.38094014, 1.858077, -4.56231, 0.38094014, 0.85807705, -5.06231, 0.38094014, 6.358077, -3.3123102, 0.38094014, -0.14192295, -3.5623102, 0.38094014, 7.108077, -3.3123102, 0.38094014, 4.358077, -2.0623102, 0.38094014, 4.608077, -2.0623102, 0.38094014, 3.358077, -3.3123102, 0.38094014, 3.358077, -4.56231, 0.38094014, 5.608077, -4.81231, 0.38094014, 4.608077, -3.5623102, 0.38094014, 2.608077, -4.56231, 0.38094014, 2.358077, -3.5623102, 0.38094014, 0.60807705, -6.31231, 0.38094014, 3.858077, -6.31231, 0.38094014, 4.608077, -4.81231, 0.38094014, 3.608077, -3.5623102, 0.38094014, 5.358077, 1.6876898, 0.38094014, 0.85807705, -2.5623102, 0.38094014, 7.858077, 2.6876898, 0.63094014, 2.608077, 3.1876898, 0.38094014, 2.858077, 3.4376898, 0.38094014, 1.858077, 2.6876898, 0.63094014, 1.858077, 6.18769, 0.38094014, 6.608077, 6.18769, 0.38094014, 0.60807705, 5.68769, 0.38094014, 2.358077, 5.18769, 0.38094014, 5.358077, 1.9376898, 0.63094014, 1.608077, 3.1876898, 0.38094014, 5.358077, 2.9376898, 0.38094014, 6.108077, 3.6876898, 0.38094014, 6.858077, 3.6876898, 0.38094014, 8.358077, 4.93769, 0.38094014, 1.858077, 2.1876898, 0.38094014, 9.358077, 2.1876898, 0.38094014, 10.358077, 4.68769, 0.38094014, -0.64192295, 7.68769, 0.38094014, 10.358077, 7.68769, 0.38094014, 6.858077, 2.6876898, 0.38094014, 5.108077, 1.4376898, 0.38094014, 9.358077, 2.6876898, 0.38094014, 3.858077, 1.6876898, 0.38094014, 4.108077, 0.6876898, 0.38094014, 8.358077, 0.6876898, 0.38094014, 6.858077, -1.0623102, 0.38094014, 6.858077, -0.5623102, 0.38094014, 3.108077, -1.8123102, 0.38094014, 5.358077, -1.0623102, 0.38094014, 5.608077, 0.43768978, 0.38094014, 4.108077, 1.6876898, 0.63094014, 6.108077, 0.18768978, 0.38094014, 3.358077, 4.68769, 1.1309402, 3.358077, 4.18769, 1.3809402, 2.858077, 3.9376898, 1.3809402, 3.608077, 3.9376898, 1.3809402, 4.358077, 4.43769, 1.1309402, 4.358077)
@@ -640,7 +639,7 @@ offset_bottom = 202.0
 text = "ESCOLHER"
 
 [node name="Panel2" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1689214509]
-modulate = Color(1, 1, 1, 0.959375)
+modulate = Color(1, 1, 1, 0.97065973)
 z_index = -1
 layout_mode = 0
 offset_left = 169.08728
@@ -668,7 +667,7 @@ scale = Vector2(0.2, 0.19947544)
 texture = ExtResource("25_vamgo")
 
 [node name="Panel3" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=884635700]
-modulate = Color(1, 1, 1, 0.91875)
+modulate = Color(1, 1, 1, 0.94131947)
 z_index = -2
 layout_mode = 0
 offset_left = 369.08728
@@ -696,7 +695,7 @@ offset_bottom = 202.5
 text = "ESCOLHER"
 
 [node name="Panel4" type="Panel" parent="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control" unique_id=1704902061]
-modulate = Color(1, 1, 1, 0.878125)
+modulate = Color(1, 1, 1, 0.91197914)
 z_index = -3
 layout_mode = 0
 offset_left = 569.0873
@@ -1059,15 +1058,6 @@ omni_attenuation = 0.6
 [node name="Markers" type="Node" parent="." unique_id=1462406723]
 script = SubResource("GDScript_c5s60")
 
-[node name="Camera3D" type="Camera3D" parent="Markers" unique_id=950510579 node_paths=PackedStringArray("marker_geral") groups=["main_camera"]]
-transform = Transform3D(-0.9993134, -0.0046586217, 0.03675659, 0.011395543, 0.90532905, 0.42455798, -0.035254665, 0.4246853, -0.9046544, 0.24687397, 1.8363862, -2.5701952)
-visible = false
-script = ExtResource("6_c5s60")
-marker_geral = NodePath("../Marker3D")
-
-[node name="SelecCamera" type="AudioStreamPlayer2D" parent="Markers/Camera3D" unique_id=2111092344]
-stream = ExtResource("25_jijtd")
-
 [node name="Marker3D" type="Marker3D" parent="Markers" unique_id=1466360193]
 transform = Transform3D(-0.9999254, -0.005735483, 0.010786874, 0, 0.8829475, 0.46947154, -0.012216892, 0.4694365, -0.88288164, 0.5946119, 2.1676383, -2.3814335)
 
@@ -1188,6 +1178,9 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Garcom" unique_id=1410510377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.711499e-09, 0.9521104, -0.11108661)
 shape = SubResource("CapsuleShape3D_qwd6u")
+
+[node name="PCscene" parent="." unique_id=757331727 instance=ExtResource("58_m58b1")]
+transform = Transform3D(-0.9149597, 0, -0.4035452, 0, 1, 0, 0.4035452, 0, -0.9149597, -3.5769563, 1.0913453, -1.8103986)
 
 [connection signal="song_selected" from="NavigationRegion3D/MusicasJukebox/CarroselContainer" to="NavigationRegion3D/Jukebox/Jukebox" method="_on_carrosel_container_song_selected"]
 [connection signal="pressed" from="NavigationRegion3D/MusicasJukebox/CarroselContainer/Control/Panel/Button" to="NavigationRegion3D/MusicasJukebox/CarroselContainer" method="_on_button_pressed"]

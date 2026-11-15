@@ -46,6 +46,9 @@ _data = {
 &"Encostado": ExtResource("12_i4kk2")
 }
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_i4kk2"]
+radius = 0.05
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i4kk2"]
 
 [node name="Garcom" type="CharacterBody3D" unique_id=609313992]
@@ -128,10 +131,16 @@ autoplay = &"Garcom/Encostado"
 [node name="Head" type="Node3D" parent="." unique_id=1470706138]
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=341566594]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0620239, -0.41379768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4710444, -0.41379768)
 current = true
 
+[node name="ShapeCast3D" type="ShapeCast3D" parent="Head/Camera3D" unique_id=1704390499]
+shape = SubResource("SphereShape3D_i4kk2")
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 4
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=445342013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80033195, -0.02834344)
 shape = SubResource("CapsuleShape3D_i4kk2")
 
 [editable path="PesonagemPrincipalTpose"]

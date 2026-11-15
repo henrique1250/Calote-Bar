@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://clfay7p6m8wil"]
+
+[ext_resource type="Texture2D" uid="uid://dmoj1ilj0cre8" path="res://art/texturas/papel-parede-windows.webp" id="1_dtgi3"]
+[ext_resource type="Script" uid="uid://bd7ci6ip2brxx" path="res://Scripts/pc_controle.gd" id="1_pelgs"]
+[ext_resource type="Texture2D" uid="uid://cikufmofx8h0m" path="res://art/texturas/cursor.png" id="2_pelgs"]
+
+[node name="PCControler" type="Control" unique_id=1597951448]
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_pelgs")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=60096506]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dtgi3")
+expand_mode = 2
+
+[node name="MouseCursor" type="Sprite2D" parent="." unique_id=1485502262]
+top_level = true
+position = Vector2(15.999999, 30.999998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_pelgs")
+offset = Vector2(16, 0)
