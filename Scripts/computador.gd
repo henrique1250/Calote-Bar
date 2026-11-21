@@ -5,8 +5,10 @@ var player:Player
 var is_using = false
 
 @onready var camera_3d: Camera3D = $Camera3D
-@onready var sub_viewport: SubViewport = $SubViewport
 @onready var pc_controler: Control = $SubViewport/PCControler
+@onready var sub_viewport: SubViewport = $SubViewport
+
+
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
@@ -15,6 +17,7 @@ func _ready() -> void:
 func on_toggle():
 	is_using = !is_using
 	camera_3d.current = is_using
+	
 	
 
 func _input(event: InputEvent) -> void:

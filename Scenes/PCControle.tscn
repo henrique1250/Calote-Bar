@@ -3,65 +3,300 @@
 [ext_resource type="Texture2D" uid="uid://dmoj1ilj0cre8" path="res://art/texturas/papel-parede-windows.webp" id="1_dtgi3"]
 [ext_resource type="Script" uid="uid://bd7ci6ip2brxx" path="res://Scripts/pc_controle.gd" id="1_pelgs"]
 [ext_resource type="Texture2D" uid="uid://cikufmofx8h0m" path="res://art/texturas/cursor.png" id="2_pelgs"]
-[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://art/texturas/Classic95/Classic95.tres" id="2_ujjww"]
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://art/texturas/Classic95/Classic95.tres" id="4_5pbkf"]
+[ext_resource type="Script" path="res://Scenes/meta_counter_script.gd" id="4_ujjww"]
+[ext_resource type="Texture2D" uid="uid://boap6qs1j5qgl" path="res://art/texturas/pasta_icone.png" id="6_n2f7o"]
+[ext_resource type="Texture2D" uid="uid://dtn0usiqi7oxy" path="res://Assets/PROP_quadro_2_transferir (22).png" id="7_pq0i5"]
 
 [node name="PCControler" type="Control" unique_id=1597951448]
 custom_minimum_size = Vector2(640, 480)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 480.0
 size_flags_horizontal = 4
 script = ExtResource("1_pelgs")
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=60096506]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_ujjww")
-texture = ExtResource("1_dtgi3")
-expand_mode = 2
 
 [node name="MouseCursor" type="Sprite2D" parent="." unique_id=1485502262]
 top_level = true
 z_index = 100
-position = Vector2(19.00003, 32.00003)
-scale = Vector2(0.2, 0.2)
+position = Vector2(11.208145, 17.800014)
+scale = Vector2(0.10886683, 0.11234559)
 texture = ExtResource("2_pelgs")
 offset = Vector2(16, 0)
 
-[node name="LineEdit" type="LineEdit" parent="." unique_id=627463795]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -359.0
-offset_top = -67.0
-offset_right = 331.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_ujjww")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1030927226]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+texture = ExtResource("1_dtgi3")
+expand_mode = 1
 
-[node name="Button" type="Button" parent="." unique_id=1420425719]
+[node name="Button" type="Button" parent="." unique_id=2017748311]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 411.0
+offset_right = 122.0
+offset_bottom = 442.0
+theme = ExtResource("4_5pbkf")
+text = "METAS
+
+"
+
+[node name="Meta" type="Panel" parent="." unique_id=543426750]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = 2.0
-offset_right = 9.0
-offset_bottom = 33.0
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_ujjww")
-text = "METAS"
+theme = ExtResource("4_5pbkf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Meta" type="Label" parent="Meta" unique_id=916392667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -34.0
+offset_right = 123.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.56)
+theme = ExtResource("4_5pbkf")
+script = ExtResource("4_ujjww")
+
+[node name="Loja" type="Button" parent="." unique_id=1081833749]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 408.0
+offset_right = 321.0
+offset_bottom = 439.0
+theme = ExtResource("4_5pbkf")
+text = "LOJA"
+
+[node name="Mensagens" type="Button" parent="." unique_id=1002533070]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 410.0
+offset_right = 581.0
+offset_bottom = 441.0
+theme = ExtResource("4_5pbkf")
+text = "MENSAGENS"
+
+[node name="Mensagens_Painel" type="Panel" parent="." unique_id=1814918492]
+visible = false
+layout_mode = 0
+offset_left = 60.0
+offset_top = 31.0
+offset_right = 585.0
+offset_bottom = 390.0
+theme = ExtResource("4_5pbkf")
+
+[node name="Panel" type="Panel" parent="Mensagens_Painel" unique_id=291046374]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 30.0
+offset_right = 485.0
+offset_bottom = 80.0
+theme = ExtResource("4_5pbkf")
+
+[node name="TextureRect" type="TextureRect" parent="Mensagens_Painel/Panel" unique_id=763394709]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+theme = ExtResource("4_5pbkf")
+texture = ExtResource("6_n2f7o")
+expand_mode = 1
+
+[node name="Label" type="Button" parent="Mensagens_Painel/Panel" unique_id=339374406]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 9.0
+offset_right = 448.0
+offset_bottom = 40.0
+theme = ExtResource("4_5pbkf")
+text = "20/11 - Imobiliária - Seu aluguel irá atrasar amanhã."
+
+[node name="Panel" type="Panel" parent="Mensagens_Painel/Panel" unique_id=2045399844]
+layout_mode = 0
+offset_top = 67.0
+offset_right = 450.0
+offset_bottom = 117.0
+theme = ExtResource("4_5pbkf")
+
+[node name="TextureRect" type="TextureRect" parent="Mensagens_Painel/Panel/Panel" unique_id=1943457696]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+theme = ExtResource("4_5pbkf")
+texture = ExtResource("6_n2f7o")
+expand_mode = 1
+
+[node name="Label" type="Button" parent="Mensagens_Painel/Panel/Panel" unique_id=967246905]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 11.0
+offset_right = 445.0
+offset_bottom = 42.0
+text = "18/11 - Mecânico: O motor pifou"
+alignment = 0
+
+[node name="Loja_Painel" type="Panel" parent="." unique_id=648575622]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 23.0
+offset_right = 596.0
+offset_bottom = 373.0
+theme = ExtResource("4_5pbkf")
+
+[node name="Panel" type="Panel" parent="Loja_Painel" unique_id=1224044103]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 69.0
+offset_right = 121.0
+offset_bottom = 189.0
+theme = ExtResource("4_5pbkf")
+
+[node name="Label" type="Label" parent="Loja_Painel/Panel" unique_id=30201177]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 91.0
+offset_right = 90.0
+offset_bottom = 114.0
+text = "PRODUTO"
+
+[node name="TextureRect" type="TextureRect" parent="Loja_Painel/Panel" unique_id=564042452]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 90.0
+offset_bottom = 89.0
+texture = ExtResource("7_pq0i5")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Loja_Painel" unique_id=974865433]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 208.0
+offset_right = 115.0
+offset_bottom = 239.0
+theme = ExtResource("4_5pbkf")
+text = "COMPRAR"
+
+[node name="Panel2" type="Panel" parent="Loja_Painel" unique_id=1312464385]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 68.0
+offset_right = 262.0
+offset_bottom = 188.0
+theme = ExtResource("4_5pbkf")
+
+[node name="Label" type="Label" parent="Loja_Painel/Panel2" unique_id=387253921]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 91.0
+offset_right = 90.0
+offset_bottom = 114.0
+text = "PRODUTO"
+
+[node name="TextureRect" type="TextureRect" parent="Loja_Painel/Panel2" unique_id=522220403]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 90.0
+offset_bottom = 89.0
+texture = ExtResource("7_pq0i5")
+expand_mode = 1
+
+[node name="Button2" type="Button" parent="Loja_Painel" unique_id=376506457]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 209.0
+offset_right = 255.0
+offset_bottom = 240.0
+theme = ExtResource("4_5pbkf")
+text = "COMPRAR"
+
+[node name="Panel3" type="Panel" parent="Loja_Painel" unique_id=1504513031]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 67.0
+offset_right = 533.0
+offset_bottom = 187.0
+theme = ExtResource("4_5pbkf")
+
+[node name="Label" type="Label" parent="Loja_Painel/Panel3" unique_id=1089281026]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 91.0
+offset_right = 90.0
+offset_bottom = 114.0
+text = "PRODUTO"
+
+[node name="TextureRect" type="TextureRect" parent="Loja_Painel/Panel3" unique_id=1234542830]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 90.0
+offset_bottom = 89.0
+texture = ExtResource("7_pq0i5")
+expand_mode = 1
+
+[node name="Button3" type="Button" parent="Loja_Painel" unique_id=224674542]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 210.0
+offset_right = 400.0
+offset_bottom = 241.0
+theme = ExtResource("4_5pbkf")
+text = "COMPRAR"
+
+[node name="Panel4" type="Panel" parent="Loja_Painel" unique_id=1061053420]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 66.0
+offset_right = 402.0
+offset_bottom = 186.0
+theme = ExtResource("4_5pbkf")
+
+[node name="Label" type="Label" parent="Loja_Painel/Panel4" unique_id=1140716483]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 91.0
+offset_right = 90.0
+offset_bottom = 114.0
+text = "PRODUTO"
+
+[node name="TextureRect" type="TextureRect" parent="Loja_Painel/Panel4" unique_id=706179121]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 90.0
+offset_bottom = 89.0
+texture = ExtResource("7_pq0i5")
+expand_mode = 1
+
+[node name="Button4" type="Button" parent="Loja_Painel" unique_id=2119982641]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 212.0
+offset_right = 529.0
+offset_bottom = 243.0
+theme = ExtResource("4_5pbkf")
+text = "COMPRAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Loja" to="." method="_on_loja_pressed"]
+[connection signal="pressed" from="Mensagens" to="." method="_on_mensagens_pressed"]

@@ -7,7 +7,6 @@ var indice_atual = 0
 
 func _ready():
 	anim_player.animation_finished.connect(_ao_terminar_animacao)
-	
 	tocar_proxima_animacao()
 
 func tocar_proxima_animacao():

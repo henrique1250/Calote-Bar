@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bkd5m344ukpky"]
 
 [ext_resource type="PackedScene" uid="uid://dyk7s0wyqbbdu" path="res://art/Personagens/PersonagemPrincipal/PesonagemPrincipalTpose.fbx" id="1_a2h7e"]
-[ext_resource type="Script" path="res://Scenes/garcom.gd" id="1_i4cmp"]
+[ext_resource type="Script" uid="uid://dgd5b1acqp755" path="res://Scenes/garcom.gd" id="1_i4cmp"]
 [ext_resource type="Script" uid="uid://eag7lleqeme8" path="res://Scripts/movimentacao.gd" id="1_i4kk2"]
 [ext_resource type="Texture2D" uid="uid://bl2j2dpb0is3k" path="res://art/Personagens/PersonagemPrincipal/PesonagemPrincipalTpose.fbm/PeleGarcom.png" id="5_hyr2r"]
 [ext_resource type="Texture2D" uid="uid://dvuqn1sb0tmed" path="res://art/Personagens/PersonagemPrincipal/PesonagemPrincipalTpose.fbm/OlhoGarcomColor.png" id="6_i4cmp"]

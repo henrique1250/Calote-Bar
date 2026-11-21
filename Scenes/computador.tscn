@@ -9,13 +9,14 @@ size = Vector3(0.8366699, 0.76538086, 0.506897)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fxa6l"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_x8vny"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_brotk"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfdb7"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_x8vny")
+albedo_texture = SubResource("ViewportTexture_brotk")
 emission_enabled = true
+emission_energy_multiplier = 4.7
 
 [node name="PCscene" type="StaticBody3D" unique_id=757331727]
 collision_layer = 4
@@ -29,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15856934, 0.41110468, -0.0
 shape = SubResource("BoxShape3D_fxa6l")
 
 [node name="PCScreen" type="MeshInstance3D" parent="." unique_id=728999462]
-transform = Transform3D(-0.0015292157, -1.0068299, 6.71463e-16, 9.5746655e-09, -3.072528e-10, -0.17571259, 0.21904282, -0.0070290365, 7.680642e-09, -0.25317094, 0.52058464, -0.018354163)
+transform = Transform3D(-0.0014023291, -1.007413, 6.71463e-16, 8.780208e-09, -3.0743078e-10, -0.17571259, 0.20086776, -0.007033108, 7.680642e-09, -0.25317094, 0.52058464, -0.014894918)
 mesh = SubResource("PlaneMesh_fxa6l")
 surface_material_override/0 = SubResource("StandardMaterial3D_jfdb7")
 
